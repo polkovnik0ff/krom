@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HITCOM — Компрессоры и аспирации под ключ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════ ШАПКА ══════════ -->
+<header>
+  <div class="h-in">
+    <a href="#" class="logo">HIT<b>COM</b></a>
+    <nav>
+      <a href="#catalog">Каталог</a>
+      <a href="#quiz">Подбор</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="h-r">
+      <a href="tel:+78005506694" class="h-phone">8 800 550 66 94</a>
+      <button class="btn btn-r" onclick="openPop('kp')">Получить КП</button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-grid">
+
+    <!-- Левая колонка -->
+    <div class="hero-l">
+      <div class="h-badge"><div class="pulse"></div>Поставки по РФ, Беларуси и Казахстану</div>
+      <h1>Компрессоры и<br>аспирация для<br>производства <em>под&nbsp;ключ</em></h1>
+      <p class="hero-sub">Подбор за 15 минут — инженер выберет нужную модель под ваш процесс и бюджет. Доставка со склада в Люберцах.</p>
+      <div class="hero-checks">
+        <div class="hck"><div class="hck-dot"></div>Гарантия 1 год на всё оборудование</div>
+        <div class="hck"><div class="hck-dot"></div>Склад в Люберцах — самовывоз сегодня</div>
+        <div class="hck"><div class="hck-dot"></div>Запчасти в наличии, ремонт без задержек</div>
+        <div class="hck"><div class="hck-dot"></div>Бесплатная доставка до ТК</div>
+      </div>
+      <div class="hero-cta">
+        <button class="btn btn-r lg" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Подобрать компрессор</button>
+        <button class="btn btn-o" onclick="openPop('kp')">Получить КП</button>
+      </div>
+    </div>
+
+    <!-- Правая колонка — карточка -->
+    <div class="hero-r">
+      <div class="hcard">
+        <div class="hcard-img">
+          <div class="hcard-img-badge">Скидки до 35%</div>
+          <svg class="comp-svg" width="140" height="190" viewBox="0 0 140 190" fill="none">
+            <rect x="25" y="18" width="90" height="118" rx="14" fill="#DDDAD3" stroke="#C5C2BB" stroke-width="1.2"/>
+            <rect x="37" y="30" width="66" height="80" rx="8" fill="#ECEAE5" stroke="#D0CEC9" stroke-width=".9"/>
+            <circle cx="70" cy="70" r="24" fill="#FFFFFF" stroke="#D0CEC9" stroke-width=".9"/>
+            <circle cx="70" cy="70" r="13" fill="#FEF0EF" stroke="#F5C5C3" stroke-width=".8"/>
+            <circle cx="70" cy="70" r="6" fill="#E8524E"/>
+            <rect x="50" y="136" width="40" height="11" rx="4" fill="#DDDAD3" stroke="#C5C2BB" stroke-width=".7"/>
+            <rect x="54" y="147" width="32" height="30" rx="4" fill="#E4E1DA" stroke="#C5C2BB" stroke-width=".7"/>
+            <line x1="10" y1="70" x2="25" y2="70" stroke="#C5C2BB" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="10" cy="70" r="4" fill="#D0CEC9"/>
+            <line x1="115" y1="70" x2="130" y2="70" stroke="#E8524E" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="130" cy="70" r="4" fill="#E8524E"/>
+            <rect x="40" y="33" width="6" height="16" rx="2" fill="#D8D5CE"/>
+            <rect x="50" y="33" width="6" height="16" rx="2" fill="#D8D5CE"/>
+            <rect x="60" y="33" width="6" height="16" rx="2" fill="#D8D5CE"/>
+            <rect x="38" y="110" width="50" height="14" rx="3" fill="#E8524E" opacity=".15"/>
+            <rect x="41" y="113" width="30" height="2" rx="1" fill="#E8524E" opacity=".4"/>
+            <rect x="41" y="117" width="20" height="2" rx="1" fill="#E8524E" opacity=".3"/>
+          </svg>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-name">HITCOM Turbo 16 — Винтовой компрессор</div>
+          <div class="hcard-params">
+            <div class="hcp"><div class="hcp-k">Мощность</div><div class="hcp-v">15 кВт</div></div>
+            <div class="hcp"><div class="hcp-k">Производ.</div><div class="hcp-v">1,8 м³/мин</div></div>
+            <div class="hcp"><div class="hcp-k">Давление</div><div class="hcp-v">8 бар</div></div>
+            <div class="hcp"><div class="hcp-k">Поставка</div><div class="hcp-v">2–3 дня</div></div>
+          </div>
+          <div class="hcard-foot">
+            <div class="hcard-price">
+              <small>Стоимость от</small>
+              <strong>243 000 ₽</strong>
+            </div>
+            <button class="btn btn-r" onclick="openPop('price')">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Статы -->
+  <div class="hero-stats">
+    <div class="hero-stats-in">
+      <div class="hstat">
+        <div class="hstat-v">300<b>+</b></div>
+        <div class="hstat-k">Моделей в наличии</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v">1 <b>год</b></div>
+        <div class="hstat-k">Гарантия на всё</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v">35<b>%</b></div>
+        <div class="hstat-k">Скидки на склад</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v">1 <b>день</b></div>
+        <div class="hstat-k">Доставка до ТК</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ПОЧЕМУ HITCOM ══════════ -->
+<section class="why">
+  <div class="w">
+    <div class="why-head">
+      <div class="s-lbl" style="color:rgba(255,255,255,.5)">Преимущества</div>
+      <div class="s-ttl">Почему выбирают HITCOM</div>
+      <p>Поставляем оборудование с подбором под задачи и сервисом после продажи</p>
+    </div>
+    <div class="why-grid">
+      <div class="wcard"><div class="wico">🛡️</div><div class="wt">Гарантия 1 год</div><div class="wd">На всё оборудование. Все запчасти на складе — ремонт без задержек.</div></div>
+      <div class="wcard"><div class="wico">🔧</div><div class="wt">Монтаж и запуск</div><div class="wd">Помогаем с запуском. Инженер на связи после установки.</div></div>
+      <div class="wcard"><div class="wico">🚚</div><div class="wt">Честные сроки</div><div class="wd">Бесплатная доставка до ТК Мэйджик Транс. Отправляем на следующий рабочий день.</div></div>
+      <div class="wcard"><div class="wico">📦</div><div class="wt">Склад в Люберцах</div><div class="wd">Самовывоз, живой осмотр оборудования. Пн–Пт 9:00–18:00.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ СЕГМЕНТЫ ══════════ -->
+<section class="segs">
+  <div class="w">
+    <div class="segs-head">
+      <div class="s-lbl">Для кого</div>
+      <div class="s-ttl">Оборудование для любой отрасли</div>
+      <p class="s-sub">Поставляем компрессоры и аспирации под любое производство</p>
+    </div>
+    <div class="seg-tabs">
+      <div class="stab on">🔧 Автосервисы / СТО</div>
+      <div class="stab">🪵 Мебельное производство</div>
+      <div class="stab">⚙️ Металлообработка</div>
+      <div class="stab">🛞 Шиномонтаж</div>
+      <div class="stab">✂️ Лазерная резка</div>
+      <div class="stab">🏭 Промышленность</div>
+      <div class="stab">🖨️ Покрасочные цеха</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ КВИЗ ══════════ -->
+<section class="quiz" id="quiz">
+  <div class="w">
+    <div class="quiz-in">
+      <div>
+        <div class="s-lbl">Мастер подбора</div>
+        <div class="s-ttl">Подбор за 15 минут</div>
+        <p class="s-sub" style="max-width:400px">4 вопроса — инженер пришлёт 2–3 варианта с ценами в WhatsApp</p>
+        <div class="qbox">
+          <div class="qprog">
+            <div class="qp cur" id="qp1"></div>
+            <div class="qp" id="qp2"></div>
+            <div class="qp" id="qp3"></div>
+            <div class="qp" id="qp4"></div>
+          </div>
+          <div class="qstep on" id="qs1">
+            <div class="q-q">Какое оборудование нужно?</div>
+            <div class="qopts">
+              <div class="qopt" onclick="selQ(this,1)">💨 Компрессор</div>
+              <div class="qopt" onclick="selQ(this,1)">🌀 Аспирация</div>
+              <div class="qopt" onclick="selQ(this,1)">🔩 Компрессор + аспирация</div>
+              <div class="qopt" onclick="selQ(this,1)">🛠️ Нужна консультация</div>
+            </div>
+            <div class="qnav"><span class="qcnt">1 из 4</span></div>
+          </div>
+          <div class="qstep" id="qs2">
+            <div class="q-q">Сфера применения?</div>
+            <div class="qopts">
+              <div class="qopt" onclick="selQ(this,2)">🔧 Авто / СТО</div>
+              <div class="qopt" onclick="selQ(this,2)">🪵 Мебель / Дерево</div>
+              <div class="qopt" onclick="selQ(this,2)">⚙️ Металл / Резка</div>
+              <div class="qopt" onclick="selQ(this,2)">🏭 Другое</div>
+            </div>
+            <div class="qnav"><button class="qback" onclick="prevQ(2)">← Назад</button><span class="qcnt">2 из 4</span></div>
+          </div>
+          <div class="qstep" id="qs3">
+            <div class="q-q">Требуемое давление?</div>
+            <div class="qopts">
+              <div class="qopt" onclick="selQ(this,3)">🟢 До 8 бар</div>
+              <div class="qopt" onclick="selQ(this,3)">🟡 10–16 бар</div>
+              <div class="qopt" onclick="selQ(this,3)">⚡ Сеть 220В</div>
+              <div class="qopt" onclick="selQ(this,3)">🔵 Помогите определить</div>
+            </div>
+            <div class="qnav"><button class="qback" onclick="prevQ(3)">← Назад</button><span class="qcnt">3 из 4</span></div>
+          </div>
+          <div class="qstep" id="qs4">
+            <div class="q-q">Примерный бюджет?</div>
+            <div class="qopts">
+              <div class="qopt" onclick="selQ(this,4)">💰 До 200 000 ₽</div>
+              <div class="qopt" onclick="selQ(this,4)">💰 200–500 тыс. ₽</div>
+              <div class="qopt" onclick="selQ(this,4)">💰 От 500 000 ₽</div>
+              <div class="qopt" onclick="selQ(this,4)">🤷 Не определился</div>
+            </div>
+            <div class="qnav"><button class="qback" onclick="prevQ(4)">← Назад</button><span class="qcnt">4 из 4</span></div>
+          </div>
+          <div class="qfinal" id="qfinal">
+            <h3>Отлично! Подберём за 15 минут</h3>
+            <p>Оставьте WhatsApp — пришлём 2–3 модели с ценами</p>
+            <div class="qform">
+              <input class="fi" type="text" placeholder="Ваше имя">
+              <input class="fi" type="tel" placeholder="WhatsApp / телефон">
+              <button class="qsub">Получить подборку →</button>
+              <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="s-lbl">После заявки</div>
+        <div class="s-ttl">Что происходит дальше</div>
+        <p class="s-sub" style="max-width:380px">Всё быстро и без лишних шагов</p>
+        <div class="asteps">
+          <div class="astep"><div class="astep-n">1</div><div><div class="astep-t">Анализ задачи</div><div class="astep-d">Инженер изучит заявку и уточнит параметры производства</div></div></div>
+          <div class="astep"><div class="astep-n">2</div><div><div class="astep-t">Подбор решения</div><div class="astep-d">Пришлём 2–3 варианта с ценами, характеристиками и сроками</div></div></div>
+          <div class="astep"><div class="astep-n">3</div><div><div class="astep-t">Коммерческое предложение</div><div class="astep-d">Выставим счёт с полным пакетом документов для бухгалтерии</div></div></div>
+          <div class="astep"><div class="astep-n">4</div><div><div class="astep-t">Поставка и поддержка</div><div class="astep-d">Доставим, поможем запустить. На связи после покупки.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ КАТАЛОГ ══════════ -->
+<section class="catalog" id="catalog">
+  <div class="w">
+    <div class="cat-head">
+      <div><div class="s-lbl">Каталог</div><div class="s-ttl">Оборудование в наличии</div></div>
+      <div class="cat-filters">
+        <button class="cf on" onclick="catF(this,'all')">Все</button>
+        <button class="cf" onclick="catF(this,'comp')">Компрессоры</button>
+        <button class="cf" onclick="catF(this,'inv')">Инверторные</button>
+        <button class="cf" onclick="catF(this,'asp')">Аспирации</button>
+        <button class="cf" onclick="catF(this,'res')">Ресиверы</button>
+      </div>
+    </div>
+    <div class="cat-grid" id="catGrid">
+
+      <!-- Карточка 1 -->
+      <div class="pcard" data-cat="comp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Хит продаж</div><div class="in pc-stock">В наличии</div>
+            <svg width="70" height="100" viewBox="0 0 70 100" fill="none" opacity=".55"><rect x="8" y="8" width="54" height="66" rx="8" fill="#DDDAD3" stroke="#C5C2BB" stroke-width=".8"/><circle cx="35" cy="41" r="15" fill="#fff" stroke="#D0CEC9" stroke-width=".7"/><circle cx="35" cy="41" r="8" fill="#FEF0EF" stroke="#F5C5C3" stroke-width=".7"/><circle cx="35" cy="41" r="3.5" fill="#E8524E"/><line x1="2" y1="41" x2="8" y2="41" stroke="#C5C2BB" stroke-width="1.5"/><line x1="62" y1="41" x2="68" y2="41" stroke="#E8524E" stroke-width="1.5"/><rect x="24" y="74" width="22" height="6" rx="2" fill="#D0CEC9"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">HITCOM Turbo 7,5 — Винтовой компрессор</div>
+            <div class="pc-params">
+              <div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div>
+              <div><div class="pp-k">Производ.</div><div class="pp-v">0,8 м³/мин</div></div>
+              <div><div class="pp-k">Давление</div><div class="pp-v">8 бар</div></div>
+              <div><div class="pp-k">Гарантия</div><div class="pp-v">1 год</div></div>
+            </div>
+            <div class="pc-foot"><div class="pc-price">от 185 000 ₽<small>экономия до 30%</small></div><button class="pc-buy" onclick="openPop('kp')">Купить</button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">HITCOM Turbo 7,5 — Винтовой</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">8 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">1–2 дня</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="openPop('kp')">Купить</button><button class="pbb2" onclick="openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <!-- Карточка 2 -->
+      <div class="pcard" data-cat="comp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Популярный</div><div class="in pc-stock">В наличии</div>
+            <svg width="70" height="100" viewBox="0 0 70 100" fill="none" opacity=".55"><rect x="6" y="6" width="58" height="72" rx="9" fill="#DDDAD3" stroke="#C5C2BB" stroke-width=".8"/><rect x="14" y="14" width="42" height="50" rx="5" fill="#ECEAE5" stroke="#D0CEC9" stroke-width=".7"/><circle cx="35" cy="39" r="13" fill="#fff" stroke="#D0CEC9" stroke-width=".7"/><circle cx="35" cy="39" r="6" fill="#FEF0EF" stroke="#F5C5C3" stroke-width=".7"/><circle cx="35" cy="39" r="2.5" fill="#E8524E"/><rect x="24" y="78" width="22" height="6" rx="2" fill="#D0CEC9"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">HITCOM Turbo 15 — Винтовой компрессор</div>
+            <div class="pc-params">
+              <div><div class="pp-k">Мощность</div><div class="pp-v">15 кВт</div></div>
+              <div><div class="pp-k">Производ.</div><div class="pp-v">1,8 м³/мин</div></div>
+              <div><div class="pp-k">Давление</div><div class="pp-v">8 бар</div></div>
+              <div><div class="pp-k">Поставка</div><div class="pp-v">2–3 дня</div></div>
+            </div>
+            <div class="pc-foot"><div class="pc-price">от 243 000 ₽<small>стандартный двигатель</small></div><button class="pc-buy" onclick="openPop('kp')">Купить</button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">HITCOM Turbo 15 — Винтовой</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">15 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">8 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">66 дБ</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">2–3 дня</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="openPop('kp')">Купить</button><button class="pbb2" onclick="openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <!-- Карточка 3 -->
+      <div class="pcard" data-cat="inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Тихий</div><div class="in pc-stock">В наличии</div>
+            <svg width="70" height="100" viewBox="0 0 70 100" fill="none" opacity=".55"><rect x="6" y="6" width="58" height="70" rx="9" fill="#DDDAD3" stroke="#C5C2BB" stroke-width=".8"/><circle cx="35" cy="41" r="18" fill="none" stroke="#F5C5C3" stroke-width=".8" stroke-dasharray="4 2"/><circle cx="35" cy="41" r="11" fill="#FEF0EF" stroke="#F5C5C3" stroke-width=".7"/><circle cx="35" cy="41" r="4.5" fill="#E8524E"/><rect x="24" y="76" width="22" height="6" rx="2" fill="#D0CEC9"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">HITCOM Inverter 22 — Инверторный</div>
+            <div class="pc-params">
+              <div><div class="pp-k">Мощность</div><div class="pp-v">22 кВт</div></div>
+              <div><div class="pp-k">Производ.</div><div class="pp-v">2,8 м³/мин</div></div>
+              <div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div>
+              <div><div class="pp-k">Шум</div><div class="pp-v">62 дБ</div></div>
+            </div>
+            <div class="pc-foot"><div class="pc-price">от 380 000 ₽<small>экономия до 40%</small></div><button class="pc-buy" onclick="openPop('kp')">Купить</button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">HITCOM Inverter 22 — Инверторный</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">22 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">2,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">62 дБ</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">3–5 дней</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="openPop('kp')">Купить</button><button class="pbb2" onclick="openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <!-- Карточка 4 (стр 2) -->
+      <div class="pcard" data-cat="asp" id="c4" style="display:none"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Аспирация</div><div class="ord pc-stock">Под заказ</div>
+            <svg width="70" height="100" viewBox="0 0 70 100" fill="none" opacity=".55"><ellipse cx="35" cy="40" rx="28" ry="28" fill="#DDDAD3" stroke="#C5C2BB" stroke-width=".8"/><ellipse cx="35" cy="40" rx="17" ry="17" fill="#ECEAE5" stroke="#D0CEC9" stroke-width=".7"/><ellipse cx="35" cy="40" rx="8" ry="8" fill="#FEF0EF" stroke="#F5C5C3" stroke-width=".7"/><circle cx="35" cy="40" r="3" fill="#E8524E"/><rect x="30" y="68" width="10" height="22" rx="3" fill="#D0CEC9"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Аспирация ASP-3000 — Мебельное пр-во</div>
+            <div class="pc-params">
+              <div><div class="pp-k">Расход</div><div class="pp-v">3 000 м³/ч</div></div>
+              <div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div>
+              <div><div class="pp-k">Фильтр</div><div class="pp-v">99,9%</div></div>
+              <div><div class="pp-k">Монтаж</div><div class="pp-v">Под ключ</div></div>
+            </div>
+            <div class="pc-foot"><div class="pc-price">Цена по запросу<small>индивидуальный проект</small></div><button class="pc-buy" onclick="openPop('kp')">Купить</button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Аспирация ASP-3000</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Расход</span><span class="pb-v">3 000 м³/ч</span></div><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Очистка</span><span class="pb-v">99,9%</span></div><div class="pb-row"><span class="pb-k">Монтаж</span><span class="pb-v">Под ключ</span></div><div class="pb-row"><span class="pb-k">Проект</span><span class="pb-v">Включён</span></div><div class="pb-row"><span class="pb-k">Окупаемость</span><span class="pb-v">18 мес</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="openPop('kp')">Купить</button><button class="pbb2" onclick="openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <!-- Карточка 5 (стр 2) -->
+      <div class="pcard" data-cat="comp" id="c5" style="display:none"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">3 в 1</div><div class="in pc-stock">В наличии</div>
+            <svg width="70" height="100" viewBox="0 0 70 100" fill="none" opacity=".55"><rect x="4" y="4" width="62" height="76" rx="9" fill="#DDDAD3" stroke="#C5C2BB" stroke-width=".8"/><rect x="10" y="11" width="26" height="54" rx="5" fill="#FEF0EF" stroke="#F5C5C3" stroke-width=".7"/><rect x="40" y="11" width="22" height="54" rx="5" fill="#ECEAE5" stroke="#D0CEC9" stroke-width=".7"/><circle cx="23" cy="38" r="9" fill="#fff" stroke="#C5C2BB" stroke-width=".7"/><circle cx="23" cy="38" r="3.5" fill="#E8524E"/><rect x="22" y="80" width="26" height="6" rx="2" fill="#D0CEC9"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Компрессорная станция 3в1 — 15 кВт</div>
+            <div class="pc-params">
+              <div><div class="pp-k">Мощность</div><div class="pp-v">15 кВт</div></div>
+              <div><div class="pp-k">Ресивер</div><div class="pp-v">500 л</div></div>
+              <div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div>
+              <div><div class="pp-k">Сеть</div><div class="pp-v">380В</div></div>
+            </div>
+            <div class="pc-foot"><div class="pc-price">от 380 000 ₽<small>всё включено</small></div><button class="pc-buy" onclick="openPop('kp')">Купить</button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Компрессорная станция 3в1</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">15 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">500 л</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Осушитель</span><span class="pb-v">Встроенный</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">3–5 дней</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="openPop('kp')">Купить</button><button class="pbb2" onclick="openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <!-- Карточка 6 (стр 2) — CTA -->
+      <div class="pcard" id="c6" style="display:none;cursor:pointer" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">
+        <div class="pc-in"><div class="pc-front" style="min-height:360px;display:flex;align-items:center;justify-content:center;background:var(--warm);">
+          <div style="text-align:center;padding:32px">
+            <div style="font-size:40px;margin-bottom:16px">🔍</div>
+            <div style="font-family:var(--fh);font-size:14px;font-weight:600;color:var(--blk);margin-bottom:8px">Не нашли модель?</div>
+            <p style="font-size:13px;color:var(--mid);margin-bottom:20px">Подберём под вашу задачу за 15 минут</p>
+            <button class="btn btn-r" style="margin:0 auto;font-size:13px;padding:11px 20px">Пройти подбор →</button>
+          </div>
+        </div></div>
+      </div>
+
+    </div>
+    <div class="cat-pag">
+      <div class="pg-n on" onclick="catPg(1)">1</div>
+      <div class="pg-n" onclick="catPg(2)">2</div>
+      <div class="pg-n" onclick="catPg(3)">3</div>
+      <div class="pg-more" onclick="catPg('next')">Показать ещё <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ОТЗЫВЫ ══════════ -->
+<section class="trust" id="trust">
+  <div class="w">
+    <div class="s-lbl">Клиенты</div>
+    <div class="s-ttl">Отзывы и кейсы клиентов</div>
+    <div class="trust-grid">
+      <div class="rev-col">
+        <div class="rcard">
+          <div class="rtop">
+            <div class="rava" style="background:linear-gradient(135deg,#c4b49a,#a89278)">АМ</div>
+            <div><div class="rname">Алексей Морозов</div><div class="rmeta">СТО «Автомастер», Самара</div></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <div class="rtxt">Брали винтовой компрессор для СТО. Инженер помог правильно подобрать под наш подъёмник и инструмент. Привезли через 2 дня. Работает без нареканий уже 8 месяцев.</div>
+        </div>
+        <div class="rcard">
+          <div class="rtop">
+            <div class="rava" style="background:linear-gradient(135deg,#9ab8a0,#6e9476)">ОН</div>
+            <div><div class="rname">Олег Никитин</div><div class="rmeta">ИП, покрасочный цех, Новосибирск</div></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <div class="rtxt">Оформили рассрочку прямо на сайте — 3 минуты. Документы, накладная — всё чётко. Запчасти для ТО тоже заказываем у них, приходят быстро через СДЭК.</div>
+        </div>
+        <div class="rcard">
+          <div class="rtop">
+            <div class="rava" style="background:linear-gradient(135deg,#a0a8c4,#7076a8)">ДК</div>
+            <div><div class="rname">Дмитрий Кузнецов</div><div class="rmeta">«КубМебель», Краснодар</div></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <div class="rtxt">Заказали аспирационную установку под ключ. Всё быстро — проект, доставка, монтаж. Воздух в цеху чистый, рабочие довольны.</div>
+        </div>
+      </div>
+      <div class="case-col">
+        <div class="kcase">
+          <div class="kcase-tag">Кейс — Мебельное производство, Москва</div>
+          <div class="kcase-ttl">Аспирация для цеха 600 м²</div>
+          <div class="kcase-desc">Подобрали и установили систему аспирации под ключ. Проектирование, монтаж, пусконаладка — 14 рабочих дней.</div>
+          <div class="kcase-stats">
+            <div><div class="ks-v">12%</div><div class="ks-k">Снижение брака</div></div>
+            <div><div class="ks-v">9 мес</div><div class="ks-k">Окупаемость</div></div>
+          </div>
+        </div>
+        <div class="kcase">
+          <div class="kcase-tag">Кейс — Автосервис, Москва</div>
+          <div class="kcase-ttl">Компрессор для сети СТО на 5 постов</div>
+          <div class="kcase-desc">Инверторный компрессор под нагрузку 5 подъёмников + инструмент. Экономия электроэнергии с первого месяца.</div>
+          <div class="kcase-stats">
+            <div><div class="ks-v">35%</div><div class="ks-k">Экономия электр.</div></div>
+            <div><div class="ks-v">2 дня</div><div class="ks-k">Поставка</div></div>
+          </div>
+        </div>
+        <div class="about-c">
+          <h4>Кто мы и почему нам доверяют</h4>
+          <div class="ai"><div class="aick">✓</div><p>Участник ВЭД — жёсткая банковская проверка при регистрации</p></div>
+          <div class="ai"><div class="aick">✓</div><p>Работаем по договору, оплата на счёт ИП, НДС 5%</p></div>
+          <div class="ai"><div class="aick">✓</div><p>Склад в Люберцах — приезжайте, осматривайте</p></div>
+          <div class="ai"><div class="aick">✓</div><p>Все запчасти в наличии — ремонт без задержек</p></div>
+          <a href="#" class="alink">Отзывы на Яндексе →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ДОСТАВКА И ОПЛАТА ══════════ -->
+<section class="delivery" id="delivery">
+  <div class="w">
+    <div class="s-lbl">Условия</div>
+    <div class="s-ttl">Доставка и оплата</div>
+    <div class="del-grid">
+      <div>
+        <div class="del-hd"><div class="del-hd-ico">🚚</div><div class="del-hd-t">Доставка</div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">Бесплатно до ТК Мэйджик Транс</div><div class="dd">Отправляем на следующий рабочий день после оплаты. Все документы оформляем сами.</div><span class="dpill">Экономия от 1 000 ₽</span></div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">По всей России, Беларуси и Казахстану</div><div class="dd">Нет терминала МТ — организуем любую другую ТК по вашему выбору.</div></div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">Надёжная упаковка</div><div class="dd">Заводская упаковка. Оборудование приходит целым.</div></div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">Самовывоз в Люберцах</div><div class="dd">Пн–Пт 9:00–18:00. Осмотр перед покупкой.</div></div></div>
+      </div>
+      <div>
+        <div class="del-hd"><div class="del-hd-ico">💳</div><div class="del-hd-t">Оплата</div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">По счёту — для юрлиц и ИП</div><div class="dd">УСН с НДС 5%. Полный пакет документов для бухгалтерии.</div></div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">Карта или QR — для физлиц</div><div class="dd">Карты Мир, Visa, MasterCard. QR-оплата. Без комиссии.</div></div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">Рассрочка «Долями» от Т-Банк</div><div class="dd">Оформление за 2 минуты онлайн. До 200 000 ₽.</div><span class="dpill">Прямо на сайте</span></div></div>
+        <div class="ditem"><div class="ddot"></div><div><div class="dt">Оплата при получении</div><div class="dd">Через представителя в Кемерово и Челябинске.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ЛИД-МАГНИТЫ ══════════ -->
+<section class="leadmag">
+  <div class="w">
+    <div class="s-lbl">Бесплатно</div>
+    <div class="s-ttl">Полезные материалы</div>
+    <div class="lm-grid">
+      <div class="lmc"><div class="lm-ico">📋</div><div class="lm-t">Каталог оборудования 2024</div><div class="lm-d">Все модели с ценами, параметрами и условиями поставки. Удобно переслать коллегам.</div><button class="lm-btn" onclick="openPop('mag')">Скачать PDF →</button></div>
+      <div class="lmc"><div class="lm-ico">✅</div><div class="lm-t">Чек-лист подбора компрессора</div><div class="lm-d">7 параметров перед покупкой. Не переплатите и не ошибитесь с мощностью.</div><button class="lm-btn" onclick="openPop('mag')">Скачать PDF →</button></div>
+      <div class="lmc"><div class="lm-ico">🔧</div><div class="lm-t">Типовой проект аспирации</div><div class="lm-d">Пример для цеха 300 м² с расчётом производительности и схемой.</div><button class="lm-btn" onclick="openPop('mag')">Скачать PDF →</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="faq-s" id="faq">
+  <div class="w">
+    <div class="s-lbl">Вопросы</div>
+    <div class="s-ttl">Частые вопросы</div>
+    <div class="faq-list">
+      <div class="fitem"><div class="fq" onclick="togF(this)">Как подобрать компрессор? <span class="fq-ico">+</span></div><div class="fa">Пройдите наш квиз — 4 вопроса, инженер пришлёт 2–3 варианта с ценами за 15 минут. Или позвоните, подберём по телефону.</div></div>
+      <div class="fitem"><div class="fq" onclick="togF(this)">Сколько стоит доставка? <span class="fq-ico">+</span></div><div class="fa">До терминала ТК Мэйджик Транс — бесплатно, следующий рабочий день. Доставка от терминала — по тарифам ТК за ваш счёт.</div></div>
+      <div class="fitem"><div class="fq" onclick="togF(this)">Какая гарантия на оборудование? <span class="fq-ico">+</span></div><div class="fa">Гарантия 1 год на всё. Все запчасти на складе. Отправка нужной детали СДЭК — 2–3 дня по России.</div></div>
+      <div class="fitem"><div class="fq" onclick="togF(this)">Есть ли у вас НДС? <span class="fq-ico">+</span></div><div class="fa">Работаем на УСН с НДС 5%. Полный пакет документов для юрлиц и ИП.</div></div>
+      <div class="fitem"><div class="fq" onclick="togF(this)">Как оформить рассрочку? <span class="fq-ico">+</span></div><div class="fa">«Долями» от Т-Банк — оформление онлайн за 2 минуты прямо на сайте. До 200 000 ₽. Без визита в банк.</div></div>
+      <div class="fitem"><div class="fq" onclick="togF(this)">Как убедиться в надёжности? <span class="fq-ico">+</span></div><div class="fa">Мы участники ВЭД (жёсткая банковская проверка), работаем по договору. Смотрите отзывы на Яндексе и 2ГИС.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ФИНАЛЬНЫЙ CTA ══════════ -->
+<section class="final">
+  <div class="w">
+    <div class="final-in">
+      <div class="final-l">
+        <h2>Готовы подобрать оборудование для производства?</h2>
+        <div class="fck-list">
+          <div class="fck"><div class="fck-dot">✓</div>Подбор за 15 минут в WhatsApp</div>
+          <div class="fck"><div class="fck-dot">✓</div>2–3 варианта с ценами и сроками</div>
+          <div class="fck"><div class="fck-dot">✓</div>Бесплатная доставка до ТК</div>
+          <div class="fck"><div class="fck-dot">✓</div>Гарантия 1 год, запчасти в наличии</div>
+        </div>
+      </div>
+      <div class="final-r">
+        <input class="ffi" type="text" placeholder="Ваше имя">
+        <input class="ffi" type="tel" placeholder="WhatsApp / телефон">
+        <input class="ffi" type="text" placeholder="Ваш город">
+        <button class="fsub">Получить подборку за 15 минут →</button>
+        <p class="fnote">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="w">
+    <div class="foot-g">
+      <div class="foot-brand">
+        <a href="#" class="logo">HIT<b>COM</b></a>
+        <p>Компрессоры и аспирации. Поставки по РФ, Беларуси и Казахстану.</p>
+      </div>
+      <div class="fcol"><div class="fc-t">Каталог</div><a href="#">Компрессоры</a><a href="#">Инверторные</a><a href="#">Аспирации</a><a href="#">Ресиверы</a><a href="#">Запчасти</a></div>
+      <div class="fcol"><div class="fc-t">Сервис</div><a href="#">Гарантия</a><a href="#">Сервис</a><a href="#">Доставка</a><a href="#">Оплата</a></div>
+      <div class="fcol"><div class="fc-t">Контакты</div><a href="tel:+78005506694">8 800 550 66 94</a><a href="#">sales@hitcom-stanki.ru</a><a href="#">Люберцы, д. Часовня 5/3</a><a href="#">Пн–Пт 9:00–18:00</a></div>
+    </div>
+    <div class="foot-bot">
+      <span>© HITCOM 2024. Все права защищены.</span>
+      <span>ИП Улуханова Е.В. · ИНН 504407540716</span>
+      <a href="#" style="color:inherit">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════ ПЛАВАЮЩИЙ ВИДЖЕТ ══════════ -->
+<div class="fw">
+  <div class="fw-menu" id="fwMenu">
+    <a href="tel:+78005506694" class="fwlnk"><div class="fw-ico" style="background:#F0F0F0">📞</div>8 800 550 66 94</a>
+    <a href="https://wa.me/79236226694" class="fwlnk"><div class="fw-ico" style="background:#ECFDF5">💬</div>WhatsApp</a>
+    <a href="https://t.me/hitcom_stanki_bot" class="fwlnk"><div class="fw-ico" style="background:#EFF6FF">✈️</div>Telegram</a>
+    <button class="fwlnk" onclick="openPop('call');document.getElementById('fwMenu').classList.remove('open')"><div class="fw-ico" style="background:#FEF0EF">⚡</div>Перезвоните за 2 мин</button>
+  </div>
+  <button class="fwtog" onclick="document.getElementById('fwMenu').classList.toggle('open')">💬</button>
+</div>
+
+<!-- ══════════ ПОПАП ══════════ -->
+<div class="pop-bg" id="popup" onclick="if(event.target===this)closePop()">
+  <div class="pop-box">
+    <button class="pop-x" onclick="closePop()">×</button>
+    <div id="popContent"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
