@@ -617,6 +617,178 @@ footer { background: var(--ink); padding: 64px 0 36px; color: #fff; }
 .hero-stats-in .hstat:nth-child(4){ animation-delay: 1.04s; }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
+/* ═══ ГАМБУРГЕР ═══ */
+.nav-tog {
+  display: none;
+  width: 38px; height: 38px;
+  background: none; border: 1px solid var(--line); border-radius: var(--r);
+  cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0;
+  transition: border-color .22s;
+}
+.nav-tog:hover { border-color: var(--ink); }
+.nav-tog span { display: block; width: 16px; height: 1.5px; background: var(--ink); transition: transform .3s cubic-bezier(.7,0,.2,1), opacity .3s; }
+.nav-tog.on span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-tog.on span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-tog.on span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ═══ 1024px — Планшет горизонтально ═══ */
+@media (max-width: 1024px) {
+  :root { --px: 40px; }
+
+  nav { gap: 20px; }
+  nav a { font-size: 13px; }
+
+  .hero-grid { grid-template-columns: 1fr 380px; gap: 48px; padding: 64px var(--px) 56px; }
+
+  .why-head { gap: 24px; }
+  .why-head p { max-width: 260px; }
+
+  .quiz-in { gap: 48px; }
+
+  .final-in { gap: 48px; }
+  .final::after, .final-orbits { right: -160px; }
+
+  .foot-g { grid-template-columns: 2fr 1fr 1fr; }
+  .foot-g .fcol:last-child { grid-column: 1; grid-row: 2; }
+}
+
+/* ═══ 768px — Планшет вертикально ═══ */
+@media (max-width: 768px) {
+  :root { --px: 32px; }
+
+  /* Шапка */
+  .nav-tog { display: flex; }
+  nav {
+    position: fixed; top: 68px; left: 0; right: 0; z-index: 299;
+    flex-direction: column; gap: 0;
+    background: var(--paper); border-bottom: 1px solid var(--line);
+    padding: 8px var(--px) 16px;
+    transform: translateY(-110%); opacity: 0; pointer-events: none;
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), opacity .3s;
+  }
+  nav.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+  nav a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  nav a:last-child { border-bottom: none; }
+  nav a::after { display: none; }
+
+  /* Hero */
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; padding: 48px var(--px) 40px; min-height: auto; }
+  .hero-r { display: flex; justify-content: center; }
+  .hcard { width: 100%; max-width: 420px; }
+
+  /* Статистика */
+  .hero-stats-in { grid-template-columns: repeat(2, 1fr); }
+  .hstat:nth-child(2n)::after { display: none; }
+  .hstat { padding: 16px 16px 16px 0; }
+
+  /* Почему HITCOM */
+  .why { padding: 72px 0; }
+  .why-head { grid-template-columns: 1fr; }
+  .why-head p { text-align: left; max-width: 100%; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Сегменты */
+  .segs { padding: 72px 0; }
+
+  /* Квиз */
+  .quiz { padding: 72px 0; }
+  .quiz-in { grid-template-columns: 1fr; gap: 36px; }
+
+  /* Каталог */
+  .catalog { padding: 72px 0; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .cat-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  /* Отзывы и кейсы */
+  .trust { padding: 72px 0; }
+  .trust-grid { grid-template-columns: 1fr; }
+
+  /* Доставка */
+  .delivery { padding: 72px 0; }
+  .del-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Лид-магниты */
+  .leadmag { padding: 72px 0; }
+  .lm-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* FAQ */
+  .faq-s { padding: 72px 0; }
+
+  /* Финальный CTA */
+  .final { padding: 72px 0; }
+  .final-in { grid-template-columns: 1fr; gap: 36px; }
+  .final::after, .final-orbits { display: none; }
+
+  /* Footer */
+  footer { padding: 56px 0 32px; }
+  .foot-g { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .foot-brand { grid-column: 1 / -1; }
+  .foot-bot { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+/* ═══ 480px — Мобайл ═══ */
+@media (max-width: 480px) {
+  :root { --px: 20px; }
+
+  /* Шапка */
+  .h-in { height: 60px; }
+  nav { top: 60px; }
+  .logo { font-size: 17px; margin-right: 0; }
+  .h-phone { display: none; }
+  .btn.btn-r { font-size: 13px; padding: 11px 16px; }
+
+  /* Hero */
+  .hero-grid { padding: 36px var(--px) 32px; gap: 28px; }
+  .hero-sub { font-size: 15px; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+  .hcard-img { height: 220px; }
+
+  /* Статистика */
+  .hstat-v { font-size: 28px; }
+  .hstat-k { font-size: 10px; }
+  .hero-stats-in { padding: 20px var(--px); }
+
+  /* Почему HITCOM */
+  .why { padding: 64px 0; }
+  .why-grid { grid-template-columns: 1fr; }
+
+  /* Квиз */
+  .quiz { padding: 64px 0; }
+  .qopts { grid-template-columns: 1fr; }
+  .qbox { padding: 24px 20px; }
+
+  /* Каталог */
+  .catalog { padding: 64px 0; }
+  .cat-grid { grid-template-columns: 1fr; }
+  .pc-back { min-height: 340px; }
+
+  /* Лид-магниты */
+  .leadmag { padding: 64px 0; }
+  .lm-grid { grid-template-columns: 1fr; }
+
+  /* Доставка */
+  .delivery { padding: 64px 0; }
+
+  /* FAQ */
+  .faq-s { padding: 64px 0; }
+  .fq { font-size: 14px; gap: 16px; }
+
+  /* Финальный CTA */
+  .final { padding: 64px 0; }
+
+  /* Footer */
+  footer { padding: 48px 0 28px; }
+  .foot-g { grid-template-columns: 1fr; gap: 28px; }
+
+  /* Виджет */
+  .fw { right: 16px; bottom: 16px; }
+  .fwtog { width: 52px; height: 52px; }
+
+  /* Попап */
+  .pop-box { padding: 28px 20px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }

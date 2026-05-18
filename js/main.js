@@ -113,6 +113,18 @@ function submitPop(btn) {
 }
 function closePop() { document.getElementById('popup').classList.remove('open'); }
 
+/* ═══ НАВИГАЦИЯ (мобайл) ═══ */
+function toggleNav() {
+  const nav = document.getElementById('main-nav');
+  const tog = document.getElementById('navTog');
+  nav.classList.toggle('open');
+  tog.classList.toggle('on');
+}
+function closeNav() {
+  document.getElementById('main-nav').classList.remove('open');
+  document.getElementById('navTog').classList.remove('on');
+}
+
 /* ═══ HEADER SCROLL ═══ */
 const hdr = document.getElementById('hdr');
 window.addEventListener('scroll', () => {

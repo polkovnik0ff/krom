@@ -67,15 +67,16 @@
 <header id="hdr">
   <div class="h-in">
     <a href="#" class="logo"><span class="logo-mark"></span>HIT<b>COM</b></a>
-    <nav>
-      <a href="#catalog">Каталог</a>
-      <a href="#quiz">Подбор</a>
-      <a href="#delivery">Доставка</a>
-      <a href="#faq">Вопросы</a>
+    <nav id="main-nav">
+      <a href="#catalog" onclick="closeNav()">Каталог</a>
+      <a href="#quiz" onclick="closeNav()">Подбор</a>
+      <a href="#delivery" onclick="closeNav()">Доставка</a>
+      <a href="#faq" onclick="closeNav()">Вопросы</a>
     </nav>
     <div class="h-r">
       <a href="tel:+78005506694" class="h-phone"><svg width="14" height="14"><use href="#i-phone"/></svg>8 800 550 66 94</a>
       <button class="btn btn-r" onclick="openPop('kp')">Получить КП <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
+      <button class="nav-tog" id="navTog" onclick="toggleNav()" aria-label="Меню"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
