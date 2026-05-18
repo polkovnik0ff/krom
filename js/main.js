@@ -63,20 +63,53 @@ function togF(el) {
 
 /* ═══ ПОПАПЫ ═══ */
 const pops = {
-  kp:      { lbl: 'Коммерческое предложение', ttl: 'Получить КП за 15 минут',   sub: 'Укажите контакт — инженер пришлёт КП с ценами и сроками', fields: ['Ваше имя', 'Max / Telegram', 'Ваш город'], btn: 'Отправить запрос' },
-  consult: { lbl: 'Консультация',             ttl: 'Задать вопрос инженеру',     sub: 'Опишите задачу — ответим в течение 30 минут',             fields: ['Ваше имя', 'Телефон или Max'], ta: 'Опишите задачу: сфера, мощность, давление...', btn: 'Задать вопрос' },
-  price:   { lbl: 'Цена',                     ttl: 'Зафиксировать цену',         sub: 'Цены меняются — зафиксируем на 3 дня',                    fields: ['Ваше имя', 'Max'], btn: 'Зафиксировать' },
-  call:    { lbl: 'Обратный звонок',          ttl: 'Перезвоним за 2 минуты',     sub: 'Укажите номер — менеджер перезвонит немедленно',          fields: ['Ваш телефон'], btn: 'Перезвоните мне' },
-  mag:     { lbl: 'Материал',                 ttl: 'Получить бесплатно',         sub: 'Пришлём на Max или email',                           fields: ['Ваше имя', 'Max или email'], btn: 'Получить' },
+  kp:      { lbl: 'Коммерческое предложение', ttl: 'Получить КП за 15 минут',   sub: 'Укажите контакт — инженер пришлёт КП с ценами и сроками', fields: [['name','Ваше имя'],['contact','Max / Telegram'],['city','Ваш город']], btn: 'Отправить запрос' },
+  consult: { lbl: 'Консультация',             ttl: 'Задать вопрос инженеру',     sub: 'Опишите задачу — ответим в течение 30 минут',             fields: [['name','Ваше имя'],['contact','Телефон или Max']], ta: 'Опишите задачу: сфера, мощность, давление...', btn: 'Задать вопрос' },
+  price:   { lbl: 'Цена',                     ttl: 'Зафиксировать цену',         sub: 'Цены меняются — зафиксируем на 3 дня',                    fields: [['name','Ваше имя'],['contact','Max']], btn: 'Зафиксировать' },
+  call:    { lbl: 'Обратный звонок',          ttl: 'Перезвоним за 2 минуты',     sub: 'Укажите номер — менеджер перезвонит немедленно',          fields: [['contact','Ваш телефон']], btn: 'Перезвоните мне' },
+  mag:     { lbl: 'Материал',                 ttl: 'Получить бесплатно',         sub: 'Пришлём на Max или email',                                fields: [['name','Ваше имя'],['contact','Max или email']], btn: 'Получить' },
 };
 function openPop(type) {
   const d = pops[type]; if (!d) return;
-  let h = `<div class="pop-lbl">${d.lbl}</div><div class="pop-ttl">${d.ttl}</div><div class="pop-sub">${d.sub}</div><div class="pop-form">`;
-  d.fields.forEach(f => { h += `<input class="fi" type="text" placeholder="${f}">`; });
-  if (d.ta) h += `<textarea class="fi" rows="3" placeholder="${d.ta}" style="resize:none"></textarea>`;
-  h += `<button class="pop-btn">${d.btn} <svg width="14" height="14"><use href="#i-arrow"/></svg></button><p class="pop-note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p></div>`;
+  let h = `<div class="pop-lbl">${d.lbl}</div><div class="pop-ttl">${d.ttl}</div><div class="pop-sub">${d.sub}</div>`;
+  h += `<div class="pop-form" id="popForm" data-type="${type}">`;
+  d.fields.forEach(([key, placeholder]) => {
+    h += `<input class="fi" type="text" data-field="${key}" placeholder="${placeholder}">`;
+  });
+  if (d.ta) h += `<textarea class="fi" data-field="message" rows="3" placeholder="${d.ta}" style="resize:none"></textarea>`;
+  h += `<input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">`;
+  h += `<button class="pop-btn" onclick="submitPop(this)">${d.btn} <svg width="14" height="14"><use href="#i-arrow"/></svg></button>`;
+  h += `<p class="pop-note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p></div>`;
   document.getElementById('popContent').innerHTML = h;
   document.getElementById('popup').classList.add('open');
+}
+function submitPop(btn) {
+  const form = document.getElementById('popForm');
+  const data = { type: form.dataset.type, website: form.querySelector('[name=website]').value };
+  form.querySelectorAll('.fi[data-field]').forEach(el => { data[el.dataset.field] = el.value.trim(); });
+  btn.disabled = true;
+  const origHTML = btn.innerHTML;
+  btn.textContent = 'Отправляем…';
+  fetch('/submit.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  })
+    .then(r => r.json())
+    .then(res => {
+      if (res.ok) {
+        document.getElementById('popContent').innerHTML =
+          '<div class="pop-success">' +
+          '<svg width="48" height="48"><use href="#i-check"/></svg>' +
+          '<div class="pop-ttl">Заявка отправлена</div>' +
+          '<div class="pop-sub">Мы свяжемся с вами в течение 30 минут</div>' +
+          '</div>';
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = origHTML;
+      }
+    })
+    .catch(() => { btn.disabled = false; btn.innerHTML = origHTML; });
 }
 function closePop() { document.getElementById('popup').classList.remove('open'); }
 
