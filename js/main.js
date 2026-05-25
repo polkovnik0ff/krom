@@ -61,20 +61,40 @@ function togF(el) {
   if (!open) { a.classList.add('open'); el.classList.add('open'); }
 }
 
+/* ═══ ТЕЛЕФОН ═══ */
+function phoneFormat(el) {
+  let d = el.value.replace(/\D/g, '');
+  if (d.startsWith('8')) d = '7' + d.slice(1);
+  if (d.length && !d.startsWith('7')) d = '7' + d;
+  d = d.slice(0, 11);
+  const n = d.slice(1);
+  let out = '';
+  if (d.length >= 1) out = '+7';
+  if (n.length > 0)  out += ' (' + n.slice(0, 3);
+  if (n.length >= 3) out += ')';
+  if (n.length > 3)  out += ' ' + n.slice(3, 6);
+  if (n.length > 6)  out += '-' + n.slice(6, 8);
+  if (n.length > 8)  out += '-' + n.slice(8, 10);
+  el.value = out;
+  el.classList.remove('err');
+}
+function phoneValid(val) { return val.replace(/\D/g, '').length === 11; }
+
 /* ═══ ПОПАПЫ ═══ */
 const pops = {
-  kp:      { lbl: 'Коммерческое предложение', ttl: 'Получить КП за 15 минут',   sub: 'Укажите контакт — инженер пришлёт КП с ценами и сроками', fields: [['name','Ваше имя'],['contact','Max / Telegram'],['city','Ваш город']], btn: 'Отправить запрос' },
-  consult: { lbl: 'Консультация',             ttl: 'Задать вопрос инженеру',     sub: 'Опишите задачу — ответим в течение 30 минут',             fields: [['name','Ваше имя'],['contact','Телефон или Max']], ta: 'Опишите задачу: сфера, мощность, давление...', btn: 'Задать вопрос' },
-  price:   { lbl: 'Цена',                     ttl: 'Зафиксировать цену',         sub: 'Цены меняются — зафиксируем на 3 дня',                    fields: [['name','Ваше имя'],['contact','Max']], btn: 'Зафиксировать' },
+  kp:      { lbl: 'Коммерческое предложение', ttl: 'Получить КП за 15 минут',   sub: 'Укажите контакт — инженер пришлёт КП с ценами и сроками', fields: [['name','Ваше имя'],['contact','Ваш телефон'],['city','Ваш город']], btn: 'Отправить запрос' },
+  consult: { lbl: 'Консультация',             ttl: 'Задать вопрос инженеру',     sub: 'Опишите задачу — ответим в течение 30 минут',             fields: [['name','Ваше имя'],['contact','Ваш телефон']], ta: 'Опишите задачу: сфера, мощность, давление...', btn: 'Задать вопрос' },
+  price:   { lbl: 'Цена',                     ttl: 'Зафиксировать цену',         sub: 'Цены меняются — зафиксируем на 3 дня',                    fields: [['name','Ваше имя'],['contact','Ваш телефон']], btn: 'Зафиксировать' },
   call:    { lbl: 'Обратный звонок',          ttl: 'Перезвоним за 2 минуты',     sub: 'Укажите номер — менеджер перезвонит немедленно',          fields: [['contact','Ваш телефон']], btn: 'Перезвоните мне' },
-  mag:     { lbl: 'Материал',                 ttl: 'Получить бесплатно',         sub: 'Пришлём на Max или email',                                fields: [['name','Ваше имя'],['contact','Max или email']], btn: 'Получить' },
+  mag:     { lbl: 'Материал',                 ttl: 'Получить бесплатно',         sub: 'Пришлём материал на указанный телефон',                   fields: [['name','Ваше имя'],['contact','Ваш телефон']], btn: 'Получить' },
 };
 function openPop(type) {
   const d = pops[type]; if (!d) return;
   let h = `<div class="pop-lbl">${d.lbl}</div><div class="pop-ttl">${d.ttl}</div><div class="pop-sub">${d.sub}</div>`;
   h += `<div class="pop-form" id="popForm" data-type="${type}">`;
   d.fields.forEach(([key, placeholder]) => {
-    h += `<input class="fi" type="text" data-field="${key}" placeholder="${placeholder}">`;
+    const isPhone = key === 'contact';
+    h += `<input class="fi" type="${isPhone ? 'tel' : 'text'}" data-field="${key}" placeholder="${placeholder}"${isPhone ? ' oninput="phoneFormat(this)"' : ''}>`;
   });
   if (d.ta) h += `<textarea class="fi" data-field="message" rows="3" placeholder="${d.ta}" style="resize:none"></textarea>`;
   h += `<input type="text" name="website" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">`;
@@ -85,6 +105,12 @@ function openPop(type) {
 }
 function submitPop(btn) {
   const form = document.getElementById('popForm');
+  const phoneEl = form.querySelector('[data-field=contact]');
+  if (phoneEl && !phoneValid(phoneEl.value)) {
+    phoneEl.classList.add('err');
+    phoneEl.focus();
+    return;
+  }
   const data = { type: form.dataset.type, website: form.querySelector('[name=website]').value };
   form.querySelectorAll('.fi[data-field]').forEach(el => { data[el.dataset.field] = el.value.trim(); });
   btn.disabled = true;
@@ -112,6 +138,77 @@ function submitPop(btn) {
     .catch(() => { btn.disabled = false; btn.innerHTML = origHTML; });
 }
 function closePop() { document.getElementById('popup').classList.remove('open'); }
+
+/* ═══ КВИЗ: ОТПРАВКА ═══ */
+function submitQuiz(btn) {
+  const phoneEl = document.getElementById('qPhone');
+  if (!phoneValid(phoneEl.value)) {
+    phoneEl.classList.add('err');
+    phoneEl.focus();
+    return;
+  }
+  const nameEl = document.getElementById('qName');
+  const answers = [];
+  document.querySelectorAll('.qstep').forEach(step => {
+    const sel = step.querySelector('.qopt.sel');
+    if (sel) answers.push(sel.textContent.trim());
+  });
+  btn.disabled = true;
+  btn.textContent = 'Отправляем…';
+  fetch('/submit.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'quiz', name: nameEl.value.trim(), contact: phoneEl.value.trim(), message: answers.join(' / '), website: '' }),
+  })
+    .then(r => r.json())
+    .then(res => {
+      if (res.ok) {
+        document.getElementById('qfinal').innerHTML =
+          '<div style="text-align:center;padding:24px 0">' +
+          '<svg width="48" height="48" style="color:var(--coral)"><use href="#i-check"/></svg>' +
+          '<h3 style="margin:16px 0 8px">Заявка отправлена!</h3>' +
+          '<p style="color:var(--ash)">Инженер пришлёт подборку в течение 15 минут</p>' +
+          '</div>';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Получить подборку';
+      }
+    })
+    .catch(() => { btn.disabled = false; btn.textContent = 'Получить подборку'; });
+}
+
+/* ═══ ФУТЕР: ОТПРАВКА ═══ */
+function submitFooter(btn) {
+  const phoneEl = document.getElementById('fPhone');
+  if (!phoneValid(phoneEl.value)) {
+    phoneEl.classList.add('err');
+    phoneEl.focus();
+    return;
+  }
+  btn.disabled = true;
+  const origHTML = btn.innerHTML;
+  btn.textContent = 'Отправляем…';
+  fetch('/submit.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'kp', name: document.getElementById('fName').value.trim(), contact: phoneEl.value.trim(), city: document.getElementById('fCity').value.trim(), website: '' }),
+  })
+    .then(r => r.json())
+    .then(res => {
+      if (res.ok) {
+        document.querySelector('.final-r').innerHTML =
+          '<div style="text-align:center;padding:16px 0;color:#fff">' +
+          '<svg width="48" height="48"><use href="#i-check"/></svg>' +
+          '<div style="font-family:var(--fh);font-size:20px;font-weight:600;margin:16px 0 8px">Заявка отправлена!</div>' +
+          '<div style="color:rgba(255,255,255,.8)">Инженер свяжется с вами в течение 15 минут</div>' +
+          '</div>';
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = origHTML;
+      }
+    })
+    .catch(() => { btn.disabled = false; btn.innerHTML = origHTML; });
+}
 
 /* ═══ НАВИГАЦИЯ (мобайл) ═══ */
 function toggleNav() {

@@ -66,6 +66,7 @@ $type_labels = [
     'price'   => 'Фиксация цены',
     'call'    => 'Обратный звонок',
     'mag'     => 'Материал',
+    'quiz'    => 'Подбор (квиз)',
 ];
 $type_label = $type_labels[$type] ?? $type;
 $date = date('d.m.Y H:i:s');

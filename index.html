@@ -323,9 +323,9 @@
             <h3>Отлично! Подберём за 15 минут</h3>
             <p>Оставьте Max — пришлём 2–3 модели с ценами</p>
             <div class="qform">
-              <input class="fi" type="text" placeholder="Ваше имя">
-              <input class="fi" type="tel" placeholder="Max / телефон">
-              <button class="qsub">Получить подборку <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
+              <input class="fi" id="qName" type="text" placeholder="Ваше имя">
+              <input class="fi" id="qPhone" type="tel" placeholder="Ваш телефон" oninput="phoneFormat(this)">
+              <button class="qsub" onclick="submitQuiz(this)">Получить подборку <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
               <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p>
             </div>
           </div>
@@ -722,10 +722,10 @@
       </div>
       <div class="final-r reveal" data-d="3">
         <div class="final-r-t">Оставьте заявку</div>
-        <input class="ffi" type="text" placeholder="Ваше имя">
-        <input class="ffi" type="tel" placeholder="Max / телефон">
-        <input class="ffi" type="text" placeholder="Ваш город">
-        <button class="fsub">Получить подборку за 15 минут <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
+        <input class="ffi" id="fName" type="text" placeholder="Ваше имя">
+        <input class="ffi" id="fPhone" type="tel" placeholder="Ваш телефон" oninput="phoneFormat(this)">
+        <input class="ffi" id="fCity" type="text" placeholder="Ваш город">
+        <button class="fsub" onclick="submitFooter(this)">Получить подборку за 15 минут <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
         <p class="fnote">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p>
       </div>
     </div>

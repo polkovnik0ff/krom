@@ -345,6 +345,7 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .qform { display: flex; flex-direction: column; gap: 10px; }
 .fi { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; font-family: var(--fb); font-size: 15px; color: var(--ink); outline: none; transition: all .2s; width: 100%; }
 .fi:focus { border-color: var(--ink); background: var(--white); box-shadow: 0 0 0 3px rgba(14,14,16,.06); }
+.fi.err { border-color: var(--coral); box-shadow: 0 0 0 3px rgba(232,82,78,.12); }
 .fi::placeholder { color: var(--ash); }
 .qsub { background: var(--ink); color: #fff; font-family: var(--fb); font-size: 14px; font-weight: 700; padding: 16px; border-radius: var(--r); border: none; cursor: pointer; transition: background .25s, transform .25s; display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
 .qsub:hover { background: var(--coral); }
@@ -537,6 +538,7 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .ffi { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.24); border-radius: var(--r); padding: 15px 16px; font-family: var(--fb); font-size: 15px; color: #fff; outline: none; transition: all .22s; width: 100%; }
 .ffi::placeholder { color: rgba(255,255,255,.55); }
 .ffi:focus { border-color: #fff; background: rgba(255,255,255,.22); box-shadow: 0 0 0 3px rgba(255,255,255,.12); }
+.ffi.err { border-color: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,.3); }
 .fsub { background: #fff; color: var(--coral); font-family: var(--fb); font-size: 14px; font-weight: 800; padding: 16px; border-radius: var(--r); border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: all .22s; }
 .fsub:hover { background: var(--ink); color: #fff; }
 .fsub svg { transition: transform .25s; }
