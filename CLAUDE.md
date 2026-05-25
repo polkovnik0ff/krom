@@ -6,6 +6,8 @@
 
 ```
 index.html        — актуальная версия (v4), основной файл
+submit.php        — обработчик форм: запись в CSV + отправка email
+data/leads.csv    — лиды (создаётся автоматически на сервере)
 hitcom-v3.html    — предыдущая версия дизайна
 hitcom-v1.html    — исходная версия (была index.html до редизайна)
 css/style.css     — стили (используются только в v1)
@@ -13,6 +15,16 @@ js/main.js        — скрипты (используются только в v
 ```
 
 `index.html` — полностью самодостаточный файл: весь CSS и JS встроены inline. Никаких внешних зависимостей кроме Google Fonts.
+
+## Обработка форм (submit.php)
+
+Принимает POST JSON, пишет лид в `data/leads.csv` и отправляет email.
+
+- **Получатель:** `pa@atwinta.ru`
+- **Отправитель:** `a42site@yandex.ru` (SMTP Яндекс, порт 465 SSL)
+- Пароль приложения Яндекс прописан прямо в файле (`SMTP_PASS`)
+- `mail()` **не используется** — прямой SMTP через сокет (`fsockopen ssl://smtp.yandex.ru:465`)
+- Защиты: honeypot-поле `website`, rate limit 3 req/min по IP
 
 ## Технологии
 
