@@ -27,7 +27,7 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: var(--fb);
   background: var(--paper);
@@ -661,6 +661,7 @@ footer { background: var(--ink); padding: 64px 0 36px; color: #fff; }
   /* Шапка */
   .nav-tog { display: flex; }
   .h-r { margin-left: auto; }
+  .h-in { padding-right: 20px; }
   nav {
     position: fixed; top: 68px; left: 0; right: 0; z-index: 299;
     flex-direction: column; gap: 0;
@@ -734,7 +735,7 @@ footer { background: var(--ink); padding: 64px 0 36px; color: #fff; }
   :root { --px: 20px; }
 
   /* Шапка */
-  .h-in { height: 60px; }
+  .h-in { height: 60px; padding-right: 20px; }
   nav { top: 60px; }
   .logo { font-size: 17px; margin-right: 0; }
   .h-phone { display: none; }
