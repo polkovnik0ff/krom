@@ -1,4 +1,6 @@
 <?php
+define('VK_BOT_URL', 'http://31.184.253.194:3001/notify');
+define('VK_API_KEY', 'hitcom-krom-2026');
 define('EMAIL_TO',   'pa@atwinta.ru');
 define('EMAIL_FROM', 'a42site@yandex.ru');
 define('SMTP_HOST',  'smtp.yandex.ru');
@@ -95,6 +97,27 @@ if ($message) $lines[] = "Сообщение: {$message}";
 $email_body = implode("\n", $lines);
 
 smtp_send(EMAIL_TO, $subject, $email_body);
+
+$vk_data = ['Тип' => $type_label];
+if ($name)    $vk_data['Имя']       = $name;
+if ($contact) $vk_data['Контакт']   = $contact;
+if ($city)    $vk_data['Город']     = $city;
+if ($message) $vk_data['Сообщение'] = $message;
+$vk_data['Дата'] = $date;
+notify_vk($vk_data);
+
+function notify_vk(array $data): void {
+    $ch = curl_init(VK_BOT_URL);
+    curl_setopt_array($ch, [
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => json_encode(['api_key' => VK_API_KEY, 'data' => $data]),
+        CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT        => 5,
+    ]);
+    curl_exec($ch);
+    curl_close($ch);
+}
 
 function smtp_send(string $to, string $subject, string $body): void {
     $fp = @fsockopen('ssl://' . SMTP_HOST, SMTP_PORT, $errno, $errstr, 10);
