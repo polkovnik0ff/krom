@@ -227,7 +227,7 @@
         <div class="w-num">04 / 04</div>
         <div class="wico"><svg><use href="#i-box"/></svg></div>
         <div class="wt">Склад в Москве</div>
-        <div class="wd">Самовывоз завтра, живой осмотр оборудования. Пн–Пт 9:00–18:00.</div>
+        <div class="wd">Самовывоз завтра. Пн–Пт 9:00–18:00.</div>
       </div>
     </div>
   </div>
@@ -271,13 +271,15 @@
       <div>
         <div class="s-lbl reveal">Мастер подбора</div>
         <div class="s-ttl reveal" data-d="1">Подбор за 15 минут</div>
-        <p class="s-sub reveal" data-d="2" style="max-width:400px">4 вопроса — инженер пришлёт 2–3 варианта с ценами в Max</p>
+        <p class="s-sub reveal" data-d="2" style="max-width:400px">6 вопросов — инженер пришлёт 2–3 подходящих варианта</p>
         <div class="qbox reveal" data-d="3">
           <div class="qprog">
             <div class="qp cur" id="qp1"></div>
             <div class="qp" id="qp2"></div>
             <div class="qp" id="qp3"></div>
             <div class="qp" id="qp4"></div>
+            <div class="qp" id="qp5"></div>
+            <div class="qp" id="qp6"></div>
           </div>
           <div class="qstep on" id="qs1">
             <div class="q-q">Какое оборудование нужно?</div>
@@ -287,7 +289,7 @@
               <div class="qopt" onclick="selQ(this,1)"><span class="qopt-mk"><svg><use href="#i-bolt"/></svg></span>Компрессор + аспирация</div>
               <div class="qopt" onclick="selQ(this,1)"><span class="qopt-mk"><svg><use href="#i-tools"/></svg></span>Нужна консультация</div>
             </div>
-            <div class="qnav"><span class="qcnt">01 / 04</span></div>
+            <div class="qnav"><span class="qcnt">01 / 06</span></div>
           </div>
           <div class="qstep" id="qs2">
             <div class="q-q">Сфера применения?</div>
@@ -297,17 +299,17 @@
               <div class="qopt" onclick="selQ(this,2)"><span class="qopt-mk"><svg><use href="#i-gear"/></svg></span>Металл / Резка</div>
               <div class="qopt" onclick="selQ(this,2)"><span class="qopt-mk"><svg><use href="#i-factory"/></svg></span>Другое</div>
             </div>
-            <div class="qnav"><button class="qback" onclick="prevQ(2)">← Назад</button><span class="qcnt">02 / 04</span></div>
+            <div class="qnav"><button class="qback" onclick="prevQ(2)">← Назад</button><span class="qcnt">02 / 06</span></div>
           </div>
           <div class="qstep" id="qs3">
             <div class="q-q">Требуемое давление?</div>
             <div class="qopts">
-              <div class="qopt" onclick="selQ(this,3)"><span class="qopt-mk"><svg><use href="#i-pressure"/></svg></span>До 8 бар</div>
-              <div class="qopt" onclick="selQ(this,3)"><span class="qopt-mk"><svg><use href="#i-pressure"/></svg></span>10–16 бар</div>
+              <div class="qopt" onclick="selQ(this,3)"><span class="qopt-mk"><svg><use href="#i-pressure"/></svg></span>До 10 бар</div>
+              <div class="qopt" onclick="selQ(this,3)"><span class="qopt-mk"><svg><use href="#i-pressure"/></svg></span>10–15 бар</div>
               <div class="qopt" onclick="selQ(this,3)"><span class="qopt-mk"><svg><use href="#i-bolt"/></svg></span>Сеть 220В</div>
               <div class="qopt" onclick="selQ(this,3)"><span class="qopt-mk"><svg><use href="#i-question"/></svg></span>Помогите определить</div>
             </div>
-            <div class="qnav"><button class="qback" onclick="prevQ(3)">← Назад</button><span class="qcnt">03 / 04</span></div>
+            <div class="qnav"><button class="qback" onclick="prevQ(3)">← Назад</button><span class="qcnt">03 / 06</span></div>
           </div>
           <div class="qstep" id="qs4">
             <div class="q-q">Примерный бюджет?</div>
@@ -317,11 +319,31 @@
               <div class="qopt" onclick="selQ(this,4)"><span class="qopt-mk"><svg><use href="#i-money"/></svg></span>От 500 000 ₽</div>
               <div class="qopt" onclick="selQ(this,4)"><span class="qopt-mk"><svg><use href="#i-question"/></svg></span>Не определился</div>
             </div>
-            <div class="qnav"><button class="qback" onclick="prevQ(4)">← Назад</button><span class="qcnt">04 / 04</span></div>
+            <div class="qnav"><button class="qback" onclick="prevQ(4)">← Назад</button><span class="qcnt">04 / 06</span></div>
+          </div>
+          <div class="qstep" id="qs5">
+            <div class="q-q">Мощность?</div>
+            <div class="qopts">
+              <div class="qopt" onclick="selQ(this,5)"><span class="qopt-mk"><svg><use href="#i-bolt"/></svg></span>До 11 кВт</div>
+              <div class="qopt" onclick="selQ(this,5)"><span class="qopt-mk"><svg><use href="#i-bolt"/></svg></span>До 22 кВт</div>
+              <div class="qopt" onclick="selQ(this,5)"><span class="qopt-mk"><svg><use href="#i-bolt"/></svg></span>До 55 кВт</div>
+              <div class="qopt" onclick="selQ(this,5)"><span class="qopt-mk"><svg><use href="#i-question"/></svg></span>Не определился</div>
+            </div>
+            <div class="qnav"><button class="qback" onclick="prevQ(5)">← Назад</button><span class="qcnt">05 / 06</span></div>
+          </div>
+          <div class="qstep" id="qs6">
+            <div class="q-q">Необходимая производительность?</div>
+            <div class="qopts">
+              <div class="qopt" onclick="selQ(this,6)"><span class="qopt-mk"><svg><use href="#i-pressure"/></svg></span>До 3 м³/мин</div>
+              <div class="qopt" onclick="selQ(this,6)"><span class="qopt-mk"><svg><use href="#i-pressure"/></svg></span>До 6 м³/мин</div>
+              <div class="qopt" onclick="selQ(this,6)"><span class="qopt-mk"><svg><use href="#i-pressure"/></svg></span>До 10 м³/мин</div>
+              <div class="qopt" onclick="selQ(this,6)"><span class="qopt-mk"><svg><use href="#i-question"/></svg></span>Не определился</div>
+            </div>
+            <div class="qnav"><button class="qback" onclick="prevQ(6)">← Назад</button><span class="qcnt">06 / 06</span></div>
           </div>
           <div class="qfinal" id="qfinal">
             <h3>Отлично! Подберём за 15 минут</h3>
-            <p>Оставьте Max — пришлём 2–3 модели с ценами</p>
+            <p>Оставьте телефон — пришлём 2–3 подходящих варианта</p>
             <div class="qform">
               <input class="fi" id="qName" type="text" placeholder="Ваше имя">
               <input class="fi" id="qPhone" type="tel" placeholder="Ваш телефон" oninput="phoneFormat(this)">
@@ -337,9 +359,9 @@
         <p class="s-sub reveal" data-d="2" style="max-width:380px">Всё быстро и без лишних шагов</p>
         <div class="asteps reveal" data-d="3">
           <div class="astep"><div class="astep-n">01<sup>—</sup></div><div><div class="astep-t">Анализ задачи</div><div class="astep-d">Инженер изучит заявку и уточнит параметры производства</div></div></div>
-          <div class="astep"><div class="astep-n">02<sup>—</sup></div><div><div class="astep-t">Подбор решения</div><div class="astep-d">Пришлём 2–3 варианта с ценами, характеристиками и сроками</div></div></div>
+          <div class="astep"><div class="astep-n">02<sup>—</sup></div><div><div class="astep-t">Подбор решения</div><div class="astep-d">Подберём подходящее решение и пришлём 2–3 варианта с ценами, характеристиками и сроками</div></div></div>
           <div class="astep"><div class="astep-n">03<sup>—</sup></div><div><div class="astep-t">Коммерческое предложение</div><div class="astep-d">Выставим счёт с полным пакетом документов для бухгалтерии</div></div></div>
-          <div class="astep"><div class="astep-n">04<sup>—</sup></div><div><div class="astep-t">Поставка и поддержка</div><div class="astep-d">Доставим, поможем запустить. На связи после покупки.</div></div></div>
+          <div class="astep"><div class="astep-n">04<sup>—</sup></div><div><div class="astep-t">Поставка и поддержка</div><div class="astep-d">Доставим, поможем запустить. Инженерная поддержка от подбора до эксплуатации.</div></div></div>
         </div>
       </div>
     </div>
@@ -729,7 +751,7 @@
         <input class="ffi" id="fName" type="text" placeholder="Ваше имя">
         <input class="ffi" id="fPhone" type="tel" placeholder="Ваш телефон" oninput="phoneFormat(this)">
         <input class="ffi" id="fCity" type="text" placeholder="Ваш город">
-        <button class="fsub" onclick="submitFooter(this)">Получить подборку за 15 минут <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
+        <button class="fsub" onclick="submitFooter(this)">Подобрать оборудование <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
         <p class="fnote">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p>
       </div>
     </div>

@@ -8,7 +8,7 @@ function nextQ(cur) {
   document.getElementById('qs' + cur).classList.remove('on');
   document.getElementById('qp' + cur).classList.remove('cur');
   document.getElementById('qp' + cur).classList.add('done');
-  if (cur < 4) {
+  if (cur < 6) {
     document.getElementById('qs' + (cur + 1)).classList.add('on');
     document.getElementById('qp' + (cur + 1)).classList.add('cur');
   } else {
