@@ -2,11 +2,11 @@
 define('VK_BOT_URL', 'http://31.184.253.194:3001/notify');
 define('VK_API_KEY', 'hitcom-krom-2026');
 define('EMAIL_TO',   'pa@atwinta.ru');
-define('EMAIL_FROM', 'a42site@yandex.ru');
+define('EMAIL_FROM', 'marketing@atwinta.ru');
 define('SMTP_HOST',  'smtp.yandex.ru');
 define('SMTP_PORT',  465);
-define('SMTP_USER',  'a42site@yandex.ru');
-define('SMTP_PASS',  'apblyzobjooismur');
+define('SMTP_USER',  'marketing@atwinta.ru');
+define('SMTP_PASS',  'bsibqmfqkzhwgeop');
 define('CSV_FILE',   __DIR__ . '/data/leads.csv');
 define('RATE_LIMIT', 3); // max submissions per IP per minute
 
