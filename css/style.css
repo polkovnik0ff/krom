@@ -322,8 +322,8 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .qp.done::after { transform: scaleX(1); }
 .qp.cur::after { transform: scaleX(.5); animation: cursorPulse 1.6s ease-in-out infinite; }
 @keyframes cursorPulse { 0%,100% { transform: scaleX(.4); } 50% { transform: scaleX(.7); } }
-.qstep { display: none; animation: qFade .4s cubic-bezier(.4,0,.2,1); }
-.qstep.on { display: block; }
+.qstep { display: none; }
+.qstep.on { display: block; animation: qFade .4s cubic-bezier(.4,0,.2,1); }
 @keyframes qFade { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
 .q-q { font-family: var(--fh); font-size: 19px; font-weight: 600; color: var(--ink); margin-bottom: 22px; line-height: 1.3; letter-spacing: -.3px; }
 .qopts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 22px; }
@@ -709,14 +709,9 @@ footer { background: var(--ink); padding: 64px 0 36px; color: #fff; }
   .trust { padding: 72px 0; }
   .trust-grid { grid-template-columns: 1fr; }
 
-  /* Доставка — табы */
+  /* Доставка */
   .delivery { padding: 72px 0; }
-  .del-tabs { display: flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-bottom: 28px; }
-  .del-tab { flex: 1; padding: 12px 16px; background: var(--paper); border: none; font-family: var(--fb); font-size: 14px; font-weight: 600; color: var(--steel); cursor: pointer; transition: background .22s, color .22s; }
-  .del-tab.on { background: var(--ink); color: #fff; }
   .del-grid { display: block; }
-  .del-col { display: none; }
-  .del-col.on { display: block; }
 
   /* Карточки — без переворота */
   .pcard:hover { transform: none; box-shadow: none; border-color: var(--line); }
@@ -783,8 +778,13 @@ footer { background: var(--ink); padding: 64px 0 36px; color: #fff; }
   .leadmag { padding: 64px 0; }
   .lm-grid { grid-template-columns: 1fr; }
 
-  /* Доставка */
+  /* Доставка — табы */
   .delivery { padding: 64px 0; }
+  .del-tabs { display: flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-bottom: 28px; }
+  .del-tab { flex: 1; padding: 12px 16px; background: var(--paper); border: none; font-family: var(--fb); font-size: 14px; font-weight: 600; color: var(--steel); cursor: pointer; transition: background .22s, color .22s; }
+  .del-tab.on { background: var(--ink); color: #fff; }
+  .del-col { display: none; }
+  .del-col.on { display: block; }
 
   /* FAQ */
   .faq-s { padding: 64px 0; }
