@@ -1,7 +1,11 @@
 <?php
-define('EMAIL_TO',  'pa@atwinta.ru');
-define('EMAIL_FROM','noreply@hitcom-stanki.ru');
-define('CSV_FILE',  __DIR__ . '/data/leads.csv');
+define('EMAIL_TO',   'pa@atwinta.ru');
+define('EMAIL_FROM', 'a42site@yandex.ru');
+define('SMTP_HOST',  'smtp.yandex.ru');
+define('SMTP_PORT',  465);
+define('SMTP_USER',  'a42site@yandex.ru');
+define('SMTP_PASS',  'apblyzobjooismur');
+define('CSV_FILE',   __DIR__ . '/data/leads.csv');
 define('RATE_LIMIT', 3); // max submissions per IP per minute
 
 header('Content-Type: application/json; charset=utf-8');
@@ -90,13 +94,38 @@ if ($city)    $lines[] = "Город: {$city}";
 if ($message) $lines[] = "Сообщение: {$message}";
 $email_body = implode("\n", $lines);
 
-$headers = implode("\r\n", [
-    'From: HITCOM <' . EMAIL_FROM . '>',
-    'Content-Type: text/plain; charset=UTF-8',
-    'X-Mailer: PHP/' . phpversion(),
-]);
-$encoded_subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
+smtp_send(EMAIL_TO, $subject, $email_body);
 
-mail(EMAIL_TO, $encoded_subject, $email_body, $headers);
+function smtp_send(string $to, string $subject, string $body): void {
+    $fp = @fsockopen('ssl://' . SMTP_HOST, SMTP_PORT, $errno, $errstr, 10);
+    if (!$fp) return;
+
+    $r = function () use ($fp): string {
+        $out = '';
+        while ($line = fgets($fp, 512)) {
+            $out .= $line;
+            if ($line[3] === ' ') break;
+        }
+        return $out;
+    };
+    $w = function (string $cmd) use ($fp): void { fputs($fp, $cmd . "\r\n"); };
+
+    $r();
+    $w('EHLO localhost'); $r();
+    $w('AUTH LOGIN');     $r();
+    $w(base64_encode(SMTP_USER)); $r();
+    $w(base64_encode(SMTP_PASS));
+    if (strpos($r(), '235') === false) { fclose($fp); return; }
+
+    $w('MAIL FROM:<' . EMAIL_FROM . '>'); $r();
+    $w('RCPT TO:<' . $to . '>');         $r();
+    $w('DATA');                          $r();
+
+    $enc_subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
+    $w("From: HITCOM <" . EMAIL_FROM . ">\r\nTo: <{$to}>\r\nSubject: {$enc_subject}\r\nContent-Type: text/plain; charset=UTF-8\r\nMIME-Version: 1.0\r\n\r\n{$body}");
+    $w('.'); $r();
+    $w('QUIT');
+    fclose($fp);
+}
 
 exit(json_encode(['ok' => true]));
