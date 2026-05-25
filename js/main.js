@@ -22,6 +22,12 @@ function prevQ(cur) {
   document.getElementById('qs' + (cur - 1)).classList.add('on');
 }
 
+/* ═══ ТАБЫ ДОСТАВКИ ═══ */
+function delTab(btn, idx) {
+  document.querySelectorAll('.del-tab').forEach((t, i) => t.classList.toggle('on', i === idx));
+  document.querySelectorAll('.del-col').forEach((c, i) => c.classList.toggle('on', i === idx));
+}
+
 /* ═══ СЕГМЕНТЫ ═══ */
 document.querySelectorAll('.stab').forEach(t => {
   t.addEventListener('click', function () {

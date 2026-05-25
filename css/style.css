@@ -461,7 +461,9 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 
 /* ═══ ДОСТАВКА И ОПЛАТА ═══ */
 .delivery { background: var(--paper); padding: 96px 0; }
+.del-tabs { display: none; }
 .del-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 44px; }
+.del-col { display: block; }
 .del-hd { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; padding-bottom: 20px; border-bottom: 1px solid var(--ink); position: relative; }
 .del-hd::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 80px; height: 3px; background: var(--coral); }
 .del-hd-ico { width: 44px; height: 44px; background: var(--ink); display: grid; place-items: center; color: #fff; }
@@ -659,7 +661,7 @@ footer { background: var(--ink); padding: 64px 0 36px; color: #fff; }
   :root { --px: 32px; }
 
   /* Шапка */
-  .nav-tog { display: flex; }
+  .nav-tog { display: none; }
   .h-r { margin-left: auto; }
   .h-in { padding-right: 20px; }
   nav {
@@ -707,9 +709,19 @@ footer { background: var(--ink); padding: 64px 0 36px; color: #fff; }
   .trust { padding: 72px 0; }
   .trust-grid { grid-template-columns: 1fr; }
 
-  /* Доставка */
+  /* Доставка — табы */
   .delivery { padding: 72px 0; }
-  .del-grid { grid-template-columns: 1fr; gap: 40px; }
+  .del-tabs { display: flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-bottom: 28px; }
+  .del-tab { flex: 1; padding: 12px 16px; background: var(--paper); border: none; font-family: var(--fb); font-size: 14px; font-weight: 600; color: var(--steel); cursor: pointer; transition: background .22s, color .22s; }
+  .del-tab.on { background: var(--ink); color: #fff; }
+  .del-grid { display: block; }
+  .del-col { display: none; }
+  .del-col.on { display: block; }
+
+  /* Карточки — без переворота */
+  .pcard:hover { transform: none; box-shadow: none; border-color: var(--line); }
+  .pcard:hover .pc-in { transform: none; }
+  .pc-back { display: none; }
 
   /* Лид-магниты */
   .leadmag { padding: 72px 0; }
