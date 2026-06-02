@@ -36,27 +36,63 @@ document.querySelectorAll('.stab').forEach(t => {
   });
 });
 
-/* ═══ КАТАЛОГ: ФИЛЬТР ═══ */
-function catF(btn, cat) {
-  document.querySelectorAll('.cf').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  document.querySelectorAll('#catGrid .pcard[data-cat]').forEach(c => {
-    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+/* ═══ КАТАЛОГ: ФИЛЬТР + ПАГИНАЦИЯ ═══ */
+let curPg = 1;
+let curCat = 'all';
+let catTotalPages = 1;
+const PER_PAGE = 6;
+
+function catRender() {
+  const allProduct = Array.from(document.querySelectorAll('#catGrid .pcard[data-cat]'))
+    .filter(c => c.id !== 'c6');
+  const filtered = allProduct.filter(c => curCat === 'all' || c.dataset.cat === curCat);
+  catTotalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+  if (curPg > catTotalPages) curPg = catTotalPages;
+
+  allProduct.forEach(c => c.style.display = 'none');
+  const pageCards = filtered.slice((curPg - 1) * PER_PAGE, curPg * PER_PAGE);
+  pageCards.forEach(c => c.style.display = '');
+
+  const c6 = document.getElementById('c6');
+  if (c6) c6.style.display = pageCards.length < PER_PAGE ? '' : 'none';
+
+  const pag = document.querySelector('.cat-pag');
+  if (pag) pag.style.display = catTotalPages <= 1 ? 'none' : '';
+
+  document.querySelectorAll('.pg-n').forEach((b, i) => {
+    b.style.display = i < catTotalPages ? '' : 'none';
+    b.classList.toggle('on', i + 1 === curPg);
+  });
+
+  const more = document.querySelector('.pg-more');
+  if (more) more.style.display = curPg < catTotalPages ? '' : 'none';
+
+  document.querySelectorAll('.cf[onclick]').forEach(btn => {
+    const m = btn.getAttribute('onclick').match(/'([^']+)'\s*\)/);
+    if (!m) return;
+    const cat = m[1];
+    const span = btn.querySelector('.cf-count');
+    if (!span) return;
+    span.textContent = cat === 'all'
+      ? allProduct.length
+      : allProduct.filter(c => c.dataset.cat === cat).length;
   });
 }
 
-/* ═══ КАТАЛОГ: ПАГИНАЦИЯ ═══ */
-let curPg = 1;
-function catPg(p) {
-  if (p === 'next') p = Math.min(curPg + 1, 3);
-  curPg = p;
-  document.querySelectorAll('.pg-n').forEach((b, i) => b.classList.toggle('on', i + 1 === p));
-  ['c4', 'c5', 'c6'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = (p === 2) ? '' : 'none';
-  });
+function catF(btn, cat) {
+  curCat = cat;
+  curPg = 1;
+  document.querySelectorAll('.cf').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  catRender();
 }
-catPg(1);
+
+function catPg(p) {
+  if (p === 'next') p = Math.min(curPg + 1, catTotalPages);
+  curPg = p;
+  catRender();
+}
+catRender();
 
 /* ═══ FAQ ═══ */
 function togF(el) {

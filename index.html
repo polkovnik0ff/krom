@@ -374,198 +374,1005 @@
     <div class="cat-head">
       <div><div class="s-lbl reveal">Каталог</div><div class="s-ttl reveal" data-d="1">Оборудование в наличии</div></div>
       <div class="cat-filters reveal" data-d="2">
-        <button class="cf on" onclick="catF(this,'all')">Все <span class="cf-count">12</span></button>
-        <button class="cf" onclick="catF(this,'comp')">Компрессоры <span class="cf-count">7</span></button>
-        <button class="cf" onclick="catF(this,'inv')">Инверторные <span class="cf-count">3</span></button>
-        <button class="cf" onclick="catF(this,'asp')">Аспирации <span class="cf-count">2</span></button>
-        <button class="cf" onclick="catF(this,'res')">Ресиверы <span class="cf-count">4</span></button>
+        <button class="cf on" onclick="catF(this,'all')">Все <span class="cf-count">55</span></button>
+        <button class="cf" onclick="catF(this,'comp-std')">Стандартные <span class="cf-count">8</span></button>
+        <button class="cf" onclick="catF(this,'comp-inv')">Инверторные <span class="cf-count">8</span></button>
+        <button class="cf" onclick="catF(this,'comp-res')">С ресивером <span class="cf-count">10</span></button>
+        <button class="cf" onclick="catF(this,'comp-3in1')">Станции 3в1 <span class="cf-count">2</span></button>
+        <button class="cf" onclick="catF(this,'asp')">Аспирация <span class="cf-count">14</span></button>
+        <button class="cf" onclick="catF(this,'asp-mfc')">MF Classic <span class="cf-count">6</span></button>
+        <button class="cf" onclick="catF(this,'dry')">Осушители <span class="cf-count">5</span></button>
+        <button class="cf" onclick="catF(this,'res')">Ресиверы <span class="cf-count">2</span></button>
       </div>
     </div>
     <div class="cat-grid" id="catGrid">
 
-      <!-- Карточка 1 -->
-      <div class="pcard reveal" data-d="1" data-cat="comp"><div class="pc-in">
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
         <div class="pc-front">
           <div class="pc-img">
-            <div class="pc-badge">Хит продаж</div><div class="stk-in pc-stock">В наличии</div>
-            <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
-              <rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/>
-              <circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/>
-              <g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite">
-                <path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/>
-                <path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/>
-                <path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/>
-                <path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/>
-              </g>
-              <circle cx="50" cy="46" r="3" fill="#0E0E10"/>
-              <rect x="22" y="72" width="32" height="10" rx="1" fill="#0E0E10"/>
-              <text x="25" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">7.5 kW</text>
-              <rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/>
-            </svg>
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-10GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
           </div>
           <div class="pc-body">
-            <div class="pc-name">HITCOM Turbo 7,5 — Винтовой компрессор</div>
-            <div class="pc-params">
-              <div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div>
-              <div><div class="pp-k">Произв.</div><div class="pp-v">0,8 м³/мин</div></div>
-              <div><div class="pp-k">Давление</div><div class="pp-v">8 бар</div></div>
-              <div><div class="pp-k">Гарантия</div><div class="pp-v">1 год</div></div>
-            </div>
-            <div class="pc-foot"><div class="pc-price">от 185 000 ₽<small>экономия до 30%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+            <div class="pc-name">Винтовой компрессор VK-10GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">0,8 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 99 800 ₽<small>скидка 31%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
           </div>
         </div>
         <div class="pc-back">
-          <div><div class="pb-name">HITCOM Turbo 7,5 — Винтовой</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">8 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">1–2 дня</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div><div class="pb-name">Винтовой компрессор VK-10GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
           <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
         </div>
       </div></div>
 
-      <!-- Карточка 2 -->
-      <div class="pcard reveal" data-d="2" data-cat="comp"><div class="pc-in">
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
         <div class="pc-front">
           <div class="pc-img">
-            <div class="pc-badge">Популярный</div><div class="stk-in pc-stock">В наличии</div>
-            <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
-              <rect x="10" y="8" width="80" height="88" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/>
-              <rect x="20" y="18" width="60" height="34" rx="2" fill="#FAF7F0" stroke="#0E0E10" stroke-width=".8"/>
-              <circle cx="50" cy="62" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/>
-              <g style="transform-origin:50px 62px;animation:rotateSlow 7s linear infinite">
-                <path d="M50 50 Q53 56 50 62 Q47 56 50 50" fill="#E8524E"/>
-                <path d="M50 74 Q47 68 50 62 Q53 68 50 74" fill="#E8524E"/>
-              </g>
-              <circle cx="50" cy="62" r="2.5" fill="#0E0E10"/>
-              <text x="24" y="28" font-family="JetBrains Mono" font-size="5" fill="#0E0E10">HITCOM</text>
-              <text x="24" y="36" font-family="JetBrains Mono" font-size="4" fill="#0E0E10" opacity=".5">T-015</text>
-              <rect x="62" y="42" width="14" height="6" fill="#E8524E" opacity=".7"/>
-              <rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/>
-            </svg>
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-15GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
           </div>
           <div class="pc-body">
-            <div class="pc-name">HITCOM Turbo 15 — Винтовой компрессор</div>
-            <div class="pc-params">
-              <div><div class="pp-k">Мощность</div><div class="pp-v">15 кВт</div></div>
-              <div><div class="pp-k">Произв.</div><div class="pp-v">1,8 м³/мин</div></div>
-              <div><div class="pp-k">Давление</div><div class="pp-v">8 бар</div></div>
-              <div><div class="pp-k">Поставка</div><div class="pp-v">2–3 дня</div></div>
-            </div>
-            <div class="pc-foot"><div class="pc-price">от 243 000 ₽<small>стандартный двигатель</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+            <div class="pc-name">Винтовой компрессор VK-15GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">11 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">1,6 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 159 600 ₽<small>скидка 24%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
           </div>
         </div>
         <div class="pc-back">
-          <div><div class="pb-name">HITCOM Turbo 15 — Винтовой</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">15 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">8 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">66 дБ</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">2–3 дня</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div><div class="pb-name">Винтовой компрессор VK-15GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">11 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
           <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
         </div>
       </div></div>
 
-      <!-- Карточка 3 -->
-      <div class="pcard reveal" data-d="3" data-cat="inv"><div class="pc-in">
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
         <div class="pc-front">
           <div class="pc-img">
-            <div class="pc-badge">Тихий</div><div class="stk-in pc-stock">В наличии</div>
-            <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
-              <rect x="10" y="8" width="80" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/>
-              <circle cx="50" cy="50" r="26" fill="none" stroke="#0E0E10" stroke-width=".8" stroke-dasharray="3 2" opacity=".5"/>
-              <circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/>
-              <g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite">
-                <path d="M50 36 Q53 44 50 50 Q47 44 50 36" fill="#E8524E"/>
-                <path d="M50 64 Q47 56 50 50 Q53 56 50 64" fill="#E8524E"/>
-                <path d="M36 50 Q44 47 50 50 Q44 53 36 50" fill="#E8524E"/>
-                <path d="M64 50 Q56 53 50 50 Q56 47 64 50" fill="#E8524E"/>
-              </g>
-              <circle cx="50" cy="50" r="3" fill="#0E0E10"/>
-              <rect x="34" y="80" width="32" height="8" rx="1" fill="#0E0E10"/>
-              <text x="38" y="86" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">INV 22kW</text>
-              <rect x="34" y="92" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/>
-            </svg>
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-20GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
           </div>
           <div class="pc-body">
-            <div class="pc-name">HITCOM Inverter 22 — Инверторный</div>
-            <div class="pc-params">
-              <div><div class="pp-k">Мощность</div><div class="pp-v">22 кВт</div></div>
-              <div><div class="pp-k">Произв.</div><div class="pp-v">2,8 м³/мин</div></div>
-              <div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div>
-              <div><div class="pp-k">Шум</div><div class="pp-v">62 дБ</div></div>
-            </div>
-            <div class="pc-foot"><div class="pc-price">от 380 000 ₽<small>экономия до 40%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+            <div class="pc-name">Винтовой компрессор VK-20GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">15 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">2,3 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 166 200 ₽<small>скидка 32%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
           </div>
         </div>
         <div class="pc-back">
-          <div><div class="pb-name">HITCOM Inverter 22 — Инверторный</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">22 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">2,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">62 дБ</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">3–5 дней</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div><div class="pb-name">Винтовой компрессор VK-20GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">15 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">2,3 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
           <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
         </div>
       </div></div>
 
-      <!-- Карточка 4 (стр 2) -->
-      <div class="pcard" data-cat="asp" id="c4" style="display:none"><div class="pc-in">
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
         <div class="pc-front">
           <div class="pc-img">
-            <div class="pc-badge">Аспирация</div><div class="stk-ord pc-stock">Под заказ</div>
-            <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
-              <ellipse cx="50" cy="48" rx="34" ry="34" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/>
-              <ellipse cx="50" cy="48" rx="20" ry="20" fill="#FAF7F0" stroke="#0E0E10" stroke-width=".8"/>
-              <g style="transform-origin:50px 48px;animation:rotateSlow 5s linear infinite">
-                <path d="M50 32 Q54 40 50 48 Q46 40 50 32" fill="#E8524E"/>
-                <path d="M50 64 Q46 56 50 48 Q54 56 50 64" fill="#E8524E"/>
-                <path d="M34 48 Q42 44 50 48 Q42 52 34 48" fill="#E8524E"/>
-                <path d="M66 48 Q58 52 50 48 Q58 44 66 48" fill="#E8524E"/>
-              </g>
-              <circle cx="50" cy="48" r="3" fill="#0E0E10"/>
-              <rect x="44" y="82" width="12" height="18" rx="1" fill="#0E0E10" opacity=".25"/>
-              <rect x="40" y="100" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/>
-            </svg>
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-30GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
           </div>
           <div class="pc-body">
-            <div class="pc-name">Аспирация ASP-3000 — Мебельное пр-во</div>
-            <div class="pc-params">
-              <div><div class="pp-k">Расход</div><div class="pp-v">3 000 м³/ч</div></div>
-              <div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div>
-              <div><div class="pp-k">Фильтр</div><div class="pp-v">99,9%</div></div>
-              <div><div class="pp-k">Монтаж</div><div class="pp-v">Под ключ</div></div>
-            </div>
-            <div class="pc-foot"><div class="pc-price">Цена по запросу<small>индивидуальный проект</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+            <div class="pc-name">Винтовой компрессор VK-30GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">22 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">3,6 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 200 270 ₽<small>скидка 31%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
           </div>
         </div>
         <div class="pc-back">
-          <div><div class="pb-name">Аспирация ASP-3000</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Расход</span><span class="pb-v">3 000 м³/ч</span></div><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Очистка</span><span class="pb-v">99,9%</span></div><div class="pb-row"><span class="pb-k">Монтаж</span><span class="pb-v">Под ключ</span></div><div class="pb-row"><span class="pb-k">Проект</span><span class="pb-v">Включён</span></div><div class="pb-row"><span class="pb-k">Окупаемость</span><span class="pb-v">18 мес</span></div></div></div>
+          <div><div class="pb-name">Винтовой компрессор VK-30GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">22 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">3,6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
           <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
         </div>
       </div></div>
 
-      <!-- Карточка 5 (стр 2) -->
-      <div class="pcard" data-cat="comp" id="c5" style="display:none"><div class="pc-in">
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-50GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-50GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">37 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">6,3 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 336 500 ₽<small>скидка 26%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-50GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">37 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">6,3 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-10PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-10PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">1,1 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 109 450 ₽<small>скидка 35%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-10PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,1 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-20PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-20PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">15 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">2,15 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 188 600 ₽<small>скидка 25%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-20PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">15 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">2,15 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-30PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-30PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">22 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">3,6 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 222 800 ₽<small>скидка 35%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-30PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">22 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">3,6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-50PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-50PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">37 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">6,3 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 370 200 ₽<small>скидка 19%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-50PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">37 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">6,3 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Сталь</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="32" y="8" width="36" height="98" rx="8" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="38" y="18" width="24" height="5" rx="1" fill="#E8524E" opacity=".5"/><rect x="38" y="26" width="18" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="38" y="32" width="20" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="50" y="70" font-family="JetBrains Mono" font-size="9" fill="#0E0E10" text-anchor="middle">600</text><text x="50" y="82" font-family="JetBrains Mono" font-size="5" fill="#0E0E10" opacity=".5" text-anchor="middle">л</text><circle cx="50" cy="99" r="4" fill="#FAF7F0" stroke="#0E0E10" stroke-width=".8"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Ресивер для сжатого воздуха 600 л</div>
+            <div class="pc-params"><div><div class="pp-k">Объём</div><div class="pp-v">600 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Тип</div><div class="pp-v">Вертикальный</div></div><div><div class="pp-k">Поставка</div><div class="pp-v">1–2 дня</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 42 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Ресивер для сжатого воздуха 600 л</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Объём</span><span class="pb-v">600 л</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Тип</span><span class="pb-v">Вертикальный</span></div><div class="pb-row"><span class="pb-k">Материал</span><span class="pb-v">Сталь</span></div><div class="pb-row"><span class="pb-k">Покрытие</span><span class="pb-v">Эпоксид</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Сталь</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="32" y="8" width="36" height="98" rx="8" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="38" y="18" width="24" height="5" rx="1" fill="#E8524E" opacity=".5"/><rect x="38" y="26" width="18" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="38" y="32" width="20" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="50" y="70" font-family="JetBrains Mono" font-size="9" fill="#0E0E10" text-anchor="middle">1000</text><text x="50" y="82" font-family="JetBrains Mono" font-size="5" fill="#0E0E10" opacity=".5" text-anchor="middle">л</text><circle cx="50" cy="99" r="4" fill="#FAF7F0" stroke="#0E0E10" stroke-width=".8"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Ресивер для сжатого воздуха 1000 л</div>
+            <div class="pc-params"><div><div class="pp-k">Объём</div><div class="pp-v">1000 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Тип</div><div class="pp-v">Вертикальный</div></div><div><div class="pp-k">Поставка</div><div class="pp-v">1–2 дня</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 48 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Ресивер для сжатого воздуха 1000 л</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Объём</span><span class="pb-v">1000 л</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Тип</span><span class="pb-v">Вертикальный</span></div><div class="pb-row"><span class="pb-k">Материал</span><span class="pb-v">Сталь</span></div><div class="pb-row"><span class="pb-k">Покрытие</span><span class="pb-v">Эпоксид</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-3in1"><div class="pc-in">
         <div class="pc-front">
           <div class="pc-img">
             <div class="pc-badge">3 в 1</div><div class="stk-in pc-stock">В наличии</div>
-            <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
-              <rect x="8" y="6" width="84" height="92" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/>
-              <rect x="14" y="14" width="34" height="66" rx="2" fill="#FBEEEC" stroke="#E8524E" stroke-width=".8"/>
-              <rect x="52" y="14" width="34" height="66" rx="2" fill="#FAF7F0" stroke="#0E0E10" stroke-width=".8"/>
-              <circle cx="31" cy="44" r="10" fill="#FAF7F0" stroke="#0E0E10" stroke-width=".8"/>
-              <g style="transform-origin:31px 44px;animation:rotateSlow 5s linear infinite">
-                <path d="M31 34 Q33 39 31 44 Q29 39 31 34" fill="#E8524E"/>
-                <path d="M31 54 Q29 49 31 44 Q33 49 31 54" fill="#E8524E"/>
-              </g>
-              <circle cx="31" cy="44" r="2" fill="#0E0E10"/>
-              <text x="56" y="24" font-family="JetBrains Mono" font-size="4.5" fill="#0E0E10">DRYER</text>
-              <rect x="56" y="28" width="26" height="3" fill="#E8524E" opacity=".5"/>
-              <rect x="56" y="34" width="20" height="3" fill="#0E0E10" opacity=".25"/>
-              <rect x="56" y="40" width="22" height="3" fill="#0E0E10" opacity=".25"/>
-              <rect x="34" y="100" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/>
-            </svg>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">COMBO-20PM</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
           </div>
           <div class="pc-body">
-            <div class="pc-name">Компрессорная станция 3в1 — 15 кВт</div>
-            <div class="pc-params">
-              <div><div class="pp-k">Мощность</div><div class="pp-v">15 кВт</div></div>
-              <div><div class="pp-k">Ресивер</div><div class="pp-v">500 л</div></div>
-              <div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div>
-              <div><div class="pp-k">Сеть</div><div class="pp-v">380В</div></div>
-            </div>
-            <div class="pc-foot"><div class="pc-price">от 380 000 ₽<small>всё включено</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+            <div class="pc-name">COMBO-20PM (инверторное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">15 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">300л</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">1,2 м³/мин</div></div><div><div class="pp-k">Управление</div><div class="pp-v">Инверторное</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 349 300 ₽<small>скидка 27%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
           </div>
         </div>
         <div class="pc-back">
-          <div><div class="pb-name">Компрессорная станция 3в1</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">15 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">500 л</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Осушитель</span><span class="pb-v">Встроенный</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380В</span></div><div class="pb-row"><span class="pb-k">Поставка</span><span class="pb-v">3–5 дней</span></div></div></div>
+          <div><div class="pb-name">COMBO-20PM (инверторное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">15 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">300л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,2 м³/мин</span></div><div class="pb-row"><span class="pb-k">Управление</span><span class="pb-v">Инверторное</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="dry"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Осушка</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="22" width="72" height="56" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><path d="M22 42 Q32 30 42 42 Q52 54 62 42 Q72 30 78 36" stroke="#0E0E10" stroke-width="1.5" fill="none" opacity=".5"/><path d="M22 58 Q32 46 42 58 Q52 70 62 58 Q72 46 78 52" stroke="#E8524E" stroke-width="1.5" fill="none"/><rect x="28" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="62" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="18" y="82" width="64" height="14" rx="2" fill="#0E0E10" opacity=".05" stroke="#0E0E10" stroke-width=".8"/><text x="50" y="92" font-family="JetBrains Mono" font-size="6" fill="#0E0E10" text-anchor="middle">OV-10P</text></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Осушитель сжатого воздуха OV-10P</div>
+            <div class="pc-params"><div><div class="pp-k">Модель</div><div class="pp-v">OV-10P</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">600 л/мин</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Тип</div><div class="pp-v">Рефрижераторный</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 36 500 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Осушитель сжатого воздуха OV-10P</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Модель</span><span class="pb-v">OV-10P</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">600 л/мин</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Тип</span><span class="pb-v">Рефрижераторный</span></div><div class="pb-row"><span class="pb-k">Вход</span><span class="pb-v">1"</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="dry"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Осушка</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="22" width="72" height="56" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><path d="M22 42 Q32 30 42 42 Q52 54 62 42 Q72 30 78 36" stroke="#0E0E10" stroke-width="1.5" fill="none" opacity=".5"/><path d="M22 58 Q32 46 42 58 Q52 70 62 58 Q72 46 78 52" stroke="#E8524E" stroke-width="1.5" fill="none"/><rect x="28" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="62" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="18" y="82" width="64" height="14" rx="2" fill="#0E0E10" opacity=".05" stroke="#0E0E10" stroke-width=".8"/><text x="50" y="92" font-family="JetBrains Mono" font-size="6" fill="#0E0E10" text-anchor="middle">OV-20P</text></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Осушитель сжатого воздуха OV-20P</div>
+            <div class="pc-params"><div><div class="pp-k">Модель</div><div class="pp-v">OV-20P</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">1200 л/мин</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Тип</div><div class="pp-v">Рефрижераторный</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 48 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Осушитель сжатого воздуха OV-20P</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Модель</span><span class="pb-v">OV-20P</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1200 л/мин</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Тип</span><span class="pb-v">Рефрижераторный</span></div><div class="pb-row"><span class="pb-k">Вход</span><span class="pb-v">1"</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="dry"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Осушка</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="22" width="72" height="56" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><path d="M22 42 Q32 30 42 42 Q52 54 62 42 Q72 30 78 36" stroke="#0E0E10" stroke-width="1.5" fill="none" opacity=".5"/><path d="M22 58 Q32 46 42 58 Q52 70 62 58 Q72 46 78 52" stroke="#E8524E" stroke-width="1.5" fill="none"/><rect x="28" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="62" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="18" y="82" width="64" height="14" rx="2" fill="#0E0E10" opacity=".05" stroke="#0E0E10" stroke-width=".8"/><text x="50" y="92" font-family="JetBrains Mono" font-size="6" fill="#0E0E10" text-anchor="middle">OV-30P</text></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Осушитель сжатого воздуха OV-30P</div>
+            <div class="pc-params"><div><div class="pp-k">Модель</div><div class="pp-v">OV-30P</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">2000 л/мин</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Тип</div><div class="pp-v">Рефрижераторный</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 59 400 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Осушитель сжатого воздуха OV-30P</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Модель</span><span class="pb-v">OV-30P</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">2000 л/мин</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Тип</span><span class="pb-v">Рефрижераторный</span></div><div class="pb-row"><span class="pb-k">Вход</span><span class="pb-v">1"</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-10GA (станд</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-10GA (стандартное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">180 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 129 250 ₽<small>скидка 16%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-10GA (стандартное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">180 л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,8 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-10PA (инвер</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-10PA (инверторное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">180 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 146 700 ₽<small>скидка 21%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-10PA (инверторное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">180 л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,1 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp-mfc"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 1 | 380 В | 3 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">3 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">1 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Classic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 24 000 ₽<small>скидка 17%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 1 | 380 В | 3 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">3 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">1 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Classic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp-mfc"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 | 380 В | 3 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">3 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Classic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 26 000 ₽<small>скидка 24%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 | 380 В | 3 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">3 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Classic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp-mfc"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 | 380 В | 5.5 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Classic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 49 800 ₽<small>скидка 15%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 | 380 В | 5.5 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Classic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp-mfc"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 | 380 В | 4 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Classic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 43 800 ₽<small>скидка 12%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 | 380 В | 4 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Classic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp-mfc"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 | 380 В | 7.5 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Classic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 55 400 ₽<small>скидка 15%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 | 380 В | 7.5 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Classic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF | 220 В | 1,5 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">1,5 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">1 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Classic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 19 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF | 220 В | 1,5 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">1,5 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">1 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Classic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 1 (С) | 220 В | 0,75 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">0,75 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">1 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Special</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 16 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 1 (С) | 220 В | 0,75 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">0,75 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">1 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Special</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">PRO</div><div class="stk-ord pc-stock">Под заказ</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 1 PRO | 380 В | 3 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">3 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">1 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">PRO</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 29 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 1 PRO | 380 В | 3 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">3 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">1 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">PRO</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">PRO</div><div class="stk-ord pc-stock">Под заказ</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 PRO | 220 В | 3 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">3 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">PRO</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 36 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 PRO | 220 В | 3 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">3 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">PRO</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">PRO</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 PRO | 380 В | 3 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">3 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">PRO</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 39 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 PRO | 380 В | 3 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">3 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">PRO</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-ord pc-stock">Под заказ</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 (C) | 380 В | 3 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">3 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Special</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 35 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 (C) | 380 В | 3 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">3 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Special</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">PRO</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 PRO | 380 В | 4 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">PRO</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 63 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 PRO | 380 В | 4 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">PRO</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 (A) | 380 В | 4 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Air</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 65 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 (A) | 380 В | 4 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Air</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 (N) | 380 В | 4 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Net</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 63 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 (N) | 380 В | 4 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Net</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">PRO</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 PRO | 380 В | 5,5 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">PRO</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 73 400 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 PRO | 380 В | 5,5 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">PRO</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">PRO</div><div class="stk-ord pc-stock">Под заказ</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 PRO | 380 В | 7,5 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">PRO</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 84 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 PRO | 380 В | 7,5 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">PRO</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-ord pc-stock">Под заказ</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 3 (B) | 380 В | 4 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">3 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Basic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 76 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 3 (B) | 380 В | 4 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">3 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Basic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-ord pc-stock">Под заказ</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 4 (B) | 380 В | 7.5 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">7,5 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">4 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Basic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 96 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 4 (B) | 380 В | 7.5 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">7,5 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">4 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Basic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 4 (D) | 380 В | 4 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">380 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">4 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Duo</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 78 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 4 (D) | 380 В | 4 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">4 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Duo</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="dry"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Осушка</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="22" width="72" height="56" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><path d="M22 42 Q32 30 42 42 Q52 54 62 42 Q72 30 78 36" stroke="#0E0E10" stroke-width="1.5" fill="none" opacity=".5"/><path d="M22 58 Q32 46 42 58 Q52 70 62 58 Q72 46 78 52" stroke="#E8524E" stroke-width="1.5" fill="none"/><rect x="28" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="62" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="18" y="82" width="64" height="14" rx="2" fill="#0E0E10" opacity=".05" stroke="#0E0E10" stroke-width=".8"/><text x="50" y="92" font-family="JetBrains Mono" font-size="6" fill="#0E0E10" text-anchor="middle">OV-50P</text></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Осушитель сжатого воздуха OV-50P</div>
+            <div class="pc-params"><div><div class="pp-k">Модель</div><div class="pp-v">OV-50P</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">3300 л/мин</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Тип</div><div class="pp-v">Рефрижераторный</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 84 000 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Осушитель сжатого воздуха OV-50P</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Модель</span><span class="pb-v">OV-50P</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">3300 л/мин</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Тип</span><span class="pb-v">Рефрижераторный</span></div><div class="pb-row"><span class="pb-k">Вход</span><span class="pb-v">1"</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="dry"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Осушка</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="22" width="72" height="56" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><path d="M22 42 Q32 30 42 42 Q52 54 62 42 Q72 30 78 36" stroke="#0E0E10" stroke-width="1.5" fill="none" opacity=".5"/><path d="M22 58 Q32 46 42 58 Q52 70 62 58 Q72 46 78 52" stroke="#E8524E" stroke-width="1.5" fill="none"/><rect x="28" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="62" y="17" width="10" height="6" rx="1" fill="#0E0E10" opacity=".3"/><rect x="18" y="82" width="64" height="14" rx="2" fill="#0E0E10" opacity=".05" stroke="#0E0E10" stroke-width=".8"/><text x="50" y="92" font-family="JetBrains Mono" font-size="6" fill="#0E0E10" text-anchor="middle">OV-75P</text></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Осушитель сжатого воздуха OV-75P</div>
+            <div class="pc-params"><div><div class="pp-k">Модель</div><div class="pp-v">OV-75P</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">5000 л/мин</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Тип</div><div class="pp-v">Рефрижераторный</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 108 400 ₽</div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Осушитель сжатого воздуха OV-75P</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Модель</span><span class="pb-v">OV-75P</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">5000 л/мин</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Тип</span><span class="pb-v">Рефрижераторный</span></div><div class="pb-row"><span class="pb-k">Вход</span><span class="pb-v">1"</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-05GA 220v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-05GA 220v (стандартное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">130л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">220 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 94 300 ₽<small>скидка 26%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-05GA 220v (стандартное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">130л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,5 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-05GA 380v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-05GA 380v (стандартное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">130л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 93 150 ₽<small>скидка 26%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-05GA 380v (стандартное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">130л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,5 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-05PA 220v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-05PA 220v (инверторное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">130л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">220 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 98 950 ₽<small>скидка 26%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-05PA 220v (инверторное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">130л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,5 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-05PA 380v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-05PA 380v (инверторное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">4 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">130л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 97 800 ₽<small>скидка 26%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-05PA 380v (инверторное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">4 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">130л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,5 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="asp-mfc"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-ord pc-stock">Под заказ</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="22" y="6" width="56" height="86" rx="18" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="50" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 50px;animation:rotateSlow 4s linear infinite"><path d="M50 36 Q54 43 50 50 Q46 43 50 36" fill="#E8524E"/><path d="M50 64 Q46 57 50 50 Q54 57 50 64" fill="#E8524E"/><path d="M36 50 Q43 46 50 50 Q43 54 36 50" fill="#E8524E"/><path d="M64 50 Q57 54 50 50 Q57 46 64 50" fill="#E8524E"/></g><circle cx="50" cy="50" r="3" fill="#0E0E10"/><rect x="44" y="90" width="12" height="14" rx="1" fill="#0E0E10" opacity=".25"/><rect x="40" y="104" width="20" height="4" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">MF 2 | 220 В | 3 кВт</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">3 кВт</div></div><div><div class="pp-k">Питание</div><div class="pp-v">220 В</div></div><div><div class="pp-k">Мешков</div><div class="pp-v">2 шт</div></div><div><div class="pp-k">Серия</div><div class="pp-v">Classic</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 26 000 ₽<small>скидка 24%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">MF 2 | 220 В | 3 кВт</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">3 кВт</span></div><div class="pb-row"><span class="pb-k">Питание</span><span class="pb-v">220 В</span></div><div class="pb-row"><span class="pb-k">Мешков</span><span class="pb-v">2 шт</span></div><div class="pb-row"><span class="pb-k">Серия</span><span class="pb-v">Classic</span></div><div class="pb-row"><span class="pb-k">Фильтр</span><span class="pb-v">99%</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-07GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-07GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">0,87 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 93 600 ₽<small>скидка 35%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-07GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,87 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-3in1"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">3 в 1</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">COMBO-30PM</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">COMBO-30PM (инверторное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">22 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">300л</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">2,0 м³/мин</div></div><div><div class="pp-k">Управление</div><div class="pp-v">Инверторное</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 408 000 ₽<small>скидка 23%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">COMBO-30PM (инверторное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">22 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">300л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">2,0 м³/мин</span></div><div class="pb-row"><span class="pb-k">Управление</span><span class="pb-v">Инверторное</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-07GA 380v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-07GA 380v (стандартное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">180 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 121 200 ₽<small>скидка 47%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-07GA 380v (стандартное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">180 л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,87 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-07PA 380v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-07PA 380v (инверторное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">180 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 129 600 ₽<small>скидка 46%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-07PA 380v (инверторное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">180 л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,87 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-07PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-07PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">5,5 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">0,87 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 96 000 ₽<small>скидка 36%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-07PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">5,5 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">0,87 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-15GA 380v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-15GA 380v (стандартное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">11 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">300 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 192 000 ₽<small>скидка 33%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-15GA 380v (стандартное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">11 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">300 л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-res"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Комплект</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="8" y="8" width="50" height="78" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="33" cy="44" r="14" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:33px 44px;animation:rotateSlow 6s linear infinite"><path d="M33 32 Q36 38 33 44 Q30 38 33 32" fill="#E8524E"/><path d="M33 56 Q30 50 33 44 Q36 50 33 56" fill="#E8524E"/><path d="M21 44 Q27 41 33 44 Q27 47 21 44" fill="#E8524E"/><path d="M45 44 Q39 47 33 44 Q39 41 45 44" fill="#E8524E"/></g><circle cx="33" cy="44" r="2.5" fill="#0E0E10"/><rect x="62" y="16" width="24" height="66" rx="6" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><rect x="65" y="22" width="18" height="4" rx="1" fill="#E8524E" opacity=".5"/><rect x="65" y="30" width="14" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="37" width="16" height="3" rx="1" fill="#0E0E10" opacity=".2"/><rect x="65" y="44" width="12" height="3" rx="1" fill="#0E0E10" opacity=".2"/><text x="10" y="78" font-family="JetBrains Mono" font-size="4.5" fill="#E8524E">VK-15PA 380v (</text><rect x="34" y="96" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-15PA 380v (инверторное управление)</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">11 кВт</div></div><div><div class="pp-k">Ресивер</div><div class="pp-v">300 л</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 198 000 ₽<small>скидка 35%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-15PA 380v (инверторное управление)</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">11 кВт</span></div><div class="pb-row"><span class="pb-k">Ресивер</span><span class="pb-v">300 л</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-15PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-15PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">11 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">1,6 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 145 200 ₽<small>скидка 36%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-15PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">11 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">1,6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-60GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-60GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">45 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">7,7 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 331 200 ₽<small>скидка 41%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-60GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">45 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">7,7 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-std"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-70GM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-70GM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">55 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">9,6 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 543 600 ₽<small>скидка 33%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-70GM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">55 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">9,6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-60PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-60PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">45 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">7,7 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 388 000 ₽<small>скидка 36%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-60PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">45 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">7,7 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
+          <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
+        </div>
+      </div></div>
+
+      <div class="pcard" data-cat="comp-inv"><div class="pc-in">
+        <div class="pc-front">
+          <div class="pc-img">
+            <div class="pc-badge">Акция</div><div class="stk-in pc-stock">В наличии</div>
+            <svg width="100" height="120" viewBox="0 0 100 120" fill="none"><rect x="14" y="10" width="72" height="84" rx="4" fill="rgba(14,14,16,.04)" stroke="#0E0E10" stroke-width="1"/><circle cx="50" cy="46" r="18" fill="#FAF7F0" stroke="#0E0E10" stroke-width="1"/><g style="transform-origin:50px 46px;animation:rotateSlow 6s linear infinite"><path d="M50 32 Q53 40 50 46 Q47 40 50 32" fill="#E8524E"/><path d="M50 60 Q47 52 50 46 Q53 52 50 60" fill="#E8524E"/><path d="M36 46 Q44 43 50 46 Q44 49 36 46" fill="#E8524E"/><path d="M64 46 Q56 49 50 46 Q56 43 64 46" fill="#E8524E"/></g><circle cx="50" cy="46" r="3" fill="#0E0E10"/><rect x="18" y="72" width="64" height="10" rx="1" fill="#0E0E10"/><text x="21" y="79" font-family="JetBrains Mono" font-size="5" fill="#E8524E">VK-70PM</text><rect x="34" y="94" width="32" height="6" rx="1" fill="#0E0E10" opacity=".25"/></svg>
+          </div>
+          <div class="pc-body">
+            <div class="pc-name">Винтовой компрессор VK-70PM</div>
+            <div class="pc-params"><div><div class="pp-k">Мощность</div><div class="pp-v">55 кВт</div></div><div><div class="pp-k">Произв.</div><div class="pp-v">9,6 м³/мин</div></div><div><div class="pp-k">Давление</div><div class="pp-v">10 бар</div></div><div><div class="pp-k">Сеть</div><div class="pp-v">380 В</div></div></div>
+            <div class="pc-foot"><div class="pc-price">от 672 000 ₽<small>скидка 27%</small></div><button class="pc-buy" onclick="event.stopPropagation();openPop('kp')">Купить<svg><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </div>
+        <div class="pc-back">
+          <div><div class="pb-name">Винтовой компрессор VK-70PM</div><div class="pb-rows"><div class="pb-row"><span class="pb-k">Мощность</span><span class="pb-v">55 кВт</span></div><div class="pb-row"><span class="pb-k">Производит.</span><span class="pb-v">9,6 м³/мин</span></div><div class="pb-row"><span class="pb-k">Давление</span><span class="pb-v">10 бар</span></div><div class="pb-row"><span class="pb-k">Напряжение</span><span class="pb-v">380 В</span></div><div class="pb-row"><span class="pb-k">Шум</span><span class="pb-v">65 дБ</span></div><div class="pb-row"><span class="pb-k">Гарантия</span><span class="pb-v">1 год</span></div></div></div>
           <div class="pb-btns"><button class="pbb1" onclick="event.stopPropagation();openPop('kp')">Купить</button><button class="pbb2" onclick="event.stopPropagation();openPop('consult')">Консультация</button></div>
         </div>
       </div></div>
@@ -587,6 +1394,13 @@
       <div class="pg-n on" onclick="catPg(1)">01</div>
       <div class="pg-n" onclick="catPg(2)">02</div>
       <div class="pg-n" onclick="catPg(3)">03</div>
+      <div class="pg-n" onclick="catPg(4)">04</div>
+      <div class="pg-n" onclick="catPg(5)">05</div>
+      <div class="pg-n" onclick="catPg(6)">06</div>
+      <div class="pg-n" onclick="catPg(7)">07</div>
+      <div class="pg-n" onclick="catPg(8)">08</div>
+      <div class="pg-n" onclick="catPg(9)">09</div>
+      <div class="pg-n" onclick="catPg(10)">10</div>
       <div class="pg-more" onclick="catPg('next')">Показать ещё <svg width="14" height="14"><use href="#i-arrow"/></svg></div>
     </div>
   </div>

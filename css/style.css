@@ -375,6 +375,7 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .pcard:hover { border-color: var(--ink); transform: translateY(-4px); box-shadow: 0 20px 50px -20px rgba(20,20,25,.18); }
 .pc-in { position: relative; transition: transform .65s cubic-bezier(.7,0,.2,1); transform-style: preserve-3d; }
 .pcard:hover .pc-in { transform: rotateY(180deg); }
+#c6.pcard:hover .pc-in { transform: none; }
 .pc-front, .pc-back { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .pc-back { position: absolute; inset: 0; transform: rotateY(180deg); background: var(--white); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; min-height: 376px; }
 .pc-img { height: 210px; background: var(--paper-2); position: relative; display: grid; place-items: center; border-bottom: 1px solid var(--line); overflow: hidden; }
