@@ -8,6 +8,107 @@ function metrikaGoal(goal, params = {}) {
   } catch (e) {}
 }
 
+const ATTRIBUTION_COOKIE = 'hitcom_attribution';
+const ATTRIBUTION_TTL_DAYS = 30;
+const COOKIE_NOTICE_KEY = 'hitcom_cookie_notice_ok';
+const ATTRIBUTION_PARAMS = [
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_id',
+  'utm_content',
+  'utm_term',
+  'utm_referrer',
+  'yclid',
+  'gclid',
+  'gbraid',
+  'wbraid',
+];
+
+function setCookie(name, value, days) {
+  const maxAge = days * 24 * 60 * 60;
+  document.cookie = `${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;
+}
+
+function getCookie(name) {
+  const item = document.cookie
+    .split('; ')
+    .find(row => row.startsWith(`${name}=`));
+  return item ? decodeURIComponent(item.slice(name.length + 1)) : '';
+}
+
+function readStoredAttribution() {
+  try {
+    return JSON.parse(localStorage.getItem(ATTRIBUTION_COOKIE) || getCookie(ATTRIBUTION_COOKIE) || '{}');
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveAttribution(data) {
+  const value = JSON.stringify(data);
+  try {
+    localStorage.setItem(ATTRIBUTION_COOKIE, value);
+  } catch (e) {}
+  setCookie(ATTRIBUTION_COOKIE, value, ATTRIBUTION_TTL_DAYS);
+}
+
+function captureAttribution() {
+  const params = new URLSearchParams(window.location.search);
+  const current = {};
+
+  ATTRIBUTION_PARAMS.forEach(key => {
+    const value = params.get(key);
+    if (value) current[key] = value;
+  });
+
+  const hasAdParams = Object.keys(current).length > 0;
+  const stored = readStoredAttribution();
+
+  if (hasAdParams) {
+    const data = {
+      ...stored,
+      ...current,
+      landing_page: window.location.href,
+      referrer: document.referrer || stored.referrer || '',
+      captured_at: new Date().toISOString(),
+    };
+    saveAttribution(data);
+    return data;
+  }
+
+  return stored;
+}
+
+const attributionData = captureAttribution();
+
+function withAttribution(data) {
+  return {
+    ...data,
+    attribution: attributionData,
+    page_url: window.location.href,
+  };
+}
+
+function acceptCookieNotice() {
+  try {
+    localStorage.setItem(COOKIE_NOTICE_KEY, '1');
+  } catch (e) {}
+  setCookie(COOKIE_NOTICE_KEY, '1', 365);
+  const note = document.getElementById('cookieNote');
+  if (note) note.hidden = true;
+}
+
+function initCookieNotice() {
+  const note = document.getElementById('cookieNote');
+  if (!note) return;
+  let accepted = getCookie(COOKIE_NOTICE_KEY) === '1';
+  try {
+    accepted = accepted || localStorage.getItem(COOKIE_NOTICE_KEY) === '1';
+  } catch (e) {}
+  note.hidden = accepted;
+}
+
 /* ═══ КВИЗ ═══ */
 function selQ(el, step) {
   el.closest('.qopts').querySelectorAll('.qopt').forEach(o => o.classList.remove('sel'));
@@ -196,7 +297,7 @@ function submitPop(btn) {
   fetch('/submit.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
+    body: JSON.stringify(withAttribution(data)),
   })
     .then(r => r.json())
     .then(res => {
@@ -245,7 +346,7 @@ function submitQuiz(btn) {
   fetch('/submit.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'quiz', name: nameEl.value.trim(), contact: phoneEl.value.trim(), message: answers.join(' / '), website: '' }),
+    body: JSON.stringify(withAttribution({ type: 'quiz', name: nameEl.value.trim(), contact: phoneEl.value.trim(), message: answers.join(' / '), website: '' })),
   })
     .then(r => r.json())
     .then(res => {
@@ -280,7 +381,7 @@ function submitFooter(btn) {
   fetch('/submit.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'kp', name: document.getElementById('fName').value.trim(), contact: phoneEl.value.trim(), city: document.getElementById('fCity').value.trim(), website: '' }),
+    body: JSON.stringify(withAttribution({ type: 'kp', name: document.getElementById('fName').value.trim(), contact: phoneEl.value.trim(), city: document.getElementById('fCity').value.trim(), website: '' })),
   })
     .then(r => r.json())
     .then(res => {
@@ -418,3 +519,5 @@ document.querySelectorAll('.btn-r').forEach(btn => {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePop();
 });
+
+initCookieNotice();

@@ -49,11 +49,49 @@ function clean(string $s): string {
     return mb_substr(strip_tags(str_replace(["\r", "\n", "\t"], ' ', trim($s))), 0, 500);
 }
 
+function clean_url(string $s): string {
+    return mb_substr(strip_tags(str_replace(["\r", "\n", "\t"], ' ', trim($s))), 0, 1200);
+}
+
+function clean_attribution(array $source): array {
+    $allowed = [
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_id',
+        'utm_content',
+        'utm_term',
+        'utm_referrer',
+        'yclid',
+        'gclid',
+        'gbraid',
+        'wbraid',
+        'landing_page',
+        'referrer',
+        'captured_at',
+    ];
+    $out = [];
+    foreach ($allowed as $key) {
+        if (!empty($source[$key]) && is_scalar($source[$key])) {
+            $out[$key] = clean_url((string)$source[$key]);
+        }
+    }
+    return $out;
+}
+
 $type    = clean($body['type']    ?? '');
 $name    = clean($body['name']    ?? '');
 $contact = clean($body['contact'] ?? '');
 $city    = clean($body['city']    ?? '');
 $message = clean($body['message'] ?? '');
+$page_url = clean_url(is_scalar($body['page_url'] ?? null) ? (string)$body['page_url'] : '');
+$attribution = clean_attribution(is_array($body['attribution'] ?? null) ? $body['attribution'] : []);
+
+$utm_lines = [];
+foreach ($attribution as $key => $value) {
+    $utm_lines[] = "{$key}: {$value}";
+}
+$utm_text = implode("\n", $utm_lines);
 
 if ($contact === '' && $name === '') {
     http_response_code(400);
@@ -81,9 +119,9 @@ $fh = fopen(CSV_FILE, 'a');
 if ($fh) {
     flock($fh, LOCK_EX);
     if ($csv_new) {
-        fputcsv($fh, ['Дата', 'Тип заявки', 'Имя', 'Контакт', 'Город', 'Сообщение'], ';');
+        fputcsv($fh, ['Дата', 'Тип заявки', 'Имя', 'Контакт', 'Город', 'Сообщение', 'Страница заявки', 'Рекламные метки'], ';');
     }
-    fputcsv($fh, [$date, $type_label, $name, $contact, $city, $message], ';');
+    fputcsv($fh, [$date, $type_label, $name, $contact, $city, $message, $page_url, $utm_text], ';');
     flock($fh, LOCK_UN);
     fclose($fh);
 }
@@ -95,6 +133,8 @@ if ($name)    $lines[] = "Имя: {$name}";
 if ($contact) $lines[] = "Контакт: {$contact}";
 if ($city)    $lines[] = "Город: {$city}";
 if ($message) $lines[] = "Сообщение: {$message}";
+if ($page_url) $lines[] = "Страница заявки: {$page_url}";
+if ($utm_text) $lines[] = "Рекламные метки:\n{$utm_text}";
 $email_body = implode("\n", $lines);
 
 foreach (explode(',', EMAIL_TO) as $email_to) {
@@ -109,6 +149,8 @@ if ($name)    $vk_data['Имя']       = $name;
 if ($contact) $vk_data['Контакт']   = $contact;
 if ($city)    $vk_data['Город']     = $city;
 if ($message) $vk_data['Сообщение'] = $message;
+if ($page_url) $vk_data['Страница заявки'] = $page_url;
+if ($utm_text) $vk_data['Рекламные метки'] = $utm_text;
 $vk_data['Дата'] = $date;
 notify_vk($vk_data);
 
