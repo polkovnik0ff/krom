@@ -1,0 +1,9 @@
+.DS_Store
+.claude/
+
+# Local catalog imports/exports
+store-*.csv
+store-catalog.csv
+
+# Local integration notes
+INTEGRATION.md
