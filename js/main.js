@@ -94,6 +94,19 @@ function catPg(p) {
 }
 catRender();
 
+function productGalleryNext(gallery) {
+  const images = Array.from(gallery.querySelectorAll('.pc-gallery-img'));
+  if (images.length < 2) return;
+  let i = Number(gallery.dataset.i || 0);
+  i = (i + 1) % images.length;
+  gallery.dataset.i = i;
+  images.forEach((img, idx) => img.classList.toggle('on', idx === i));
+}
+
+document.querySelectorAll('.pc-gallery').forEach(gallery => {
+  setInterval(() => productGalleryNext(gallery), 3000);
+});
+
 /* ═══ FAQ ═══ */
 function togF(el) {
   const a = el.nextElementSibling;
