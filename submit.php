@@ -1,7 +1,7 @@
 <?php
 define('VK_BOT_URL', 'http://31.184.253.194:3001/notify');
 define('VK_API_KEY', 'hitcom-krom-2026');
-define('EMAIL_TO',   'pa@atwinta.ru,sales@hitcom-stanki.ru');
+define('EMAIL_TO',   'pa@atwinta.ru');
 define('EMAIL_FROM', 'marketing@atwinta.ru');
 define('SMTP_HOST',  'smtp.yandex.ru');
 define('SMTP_PORT',  465);
