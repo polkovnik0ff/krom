@@ -10,6 +10,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109608960', 'ym');
+
+    ym(109608960, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109608960" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body class="notranslate" translate="no">
 
@@ -74,7 +87,7 @@
       <a href="#faq" onclick="closeNav()">Вопросы</a>
     </nav>
     <div class="h-r">
-      <a href="tel:+78005506694" class="h-phone"><svg width="14" height="14"><use href="#i-phone"/></svg>8 800 550 66 94</a>
+      <a href="tel:+78005506694" class="h-phone" onclick="metrikaGoal('header_phone_click')"><svg width="14" height="14"><use href="#i-phone"/></svg>8 800 550 66 94</a>
       <button class="nav-tog" id="navTog" onclick="toggleNav()" aria-label="Меню"><span></span><span></span><span></span></button>
       <button class="btn btn-r" onclick="openPop('kp')">Получить КП <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
     </div>
@@ -95,8 +108,8 @@
         <div class="hck"><span class="hck-dot"><svg width="10" height="10" style="color:#fff"><use href="#i-check"/></svg></span>Бесплатная доставка до ТК Мэйджик Транс</div>
       </div>
       <div class="hero-cta">
-        <button class="btn btn-r lg" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Подобрать компрессор <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
-        <button class="btn btn-o" onclick="openPop('kp')">Получить КП</button>
+        <button class="btn btn-r lg" onclick="metrikaGoal('hero_quiz_click');metrikaGoal('quiz_start');document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Подобрать компрессор <svg width="14" height="14"><use href="#i-arrow"/></svg></button>
+        <button class="btn btn-o" onclick="metrikaGoal('hero_kp_click');openPop('kp')">Получить КП</button>
       </div>
     </div>
 
@@ -120,7 +133,7 @@
               <small>Стоимость от</small>
               <strong>93 600 ₽</strong>
             </div>
-            <button class="btn btn-r" onclick="openPop('price')">Заказать <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
+            <button class="btn btn-r" onclick="metrikaGoal('hero_price_click');openPop('price')">Заказать <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
           </div>
         </div>
       </div>
@@ -1715,21 +1728,21 @@
         <div class="lm-ico"><svg><use href="#i-doc"/></svg></div>
         <div class="lm-t">Каталог оборудования 2026</div>
         <div class="lm-d">Все модели с ценами, параметрами и условиями поставки. Удобно переслать коллегам.</div>
-        <button class="lm-btn" onclick="openPop('mag')">Скачать PDF <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
+        <button class="lm-btn" onclick="metrikaGoal('leadmag_catalog_click');openPop('mag')">Скачать PDF <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
       </div>
       <div class="lmc reveal" data-d="2">
         <div class="lm-num">02 / 03</div>
         <div class="lm-ico"><svg><use href="#i-checklist"/></svg></div>
         <div class="lm-t">Чек-лист подбора компрессора</div>
         <div class="lm-d">7 параметров перед покупкой. Не переплатите и не ошибитесь с мощностью.</div>
-        <button class="lm-btn" onclick="openPop('mag')">Скачать PDF <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
+        <button class="lm-btn" onclick="metrikaGoal('leadmag_checklist_click');openPop('mag')">Скачать PDF <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
       </div>
       <div class="lmc reveal" data-d="3">
         <div class="lm-num">03 / 03</div>
         <div class="lm-ico"><svg><use href="#i-checklist"/></svg></div>
         <div class="lm-t">Регламент ТО компрессоров</div>
         <div class="lm-d">Таблица периодичности обслуживания HITCOM по моделям: когда менять фильтры, сепараторы и другие элементы ТО.</div>
-        <button class="lm-btn" onclick="openPop('mag')">Получить таблицу <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
+        <button class="lm-btn" onclick="metrikaGoal('leadmag_maintenance_click');openPop('mag')">Получить таблицу <svg width="12" height="12"><use href="#i-arrow"/></svg></button>
       </div>
     </div>
   </div>
@@ -1789,7 +1802,7 @@
       </div>
       <div class="fcol"><div class="fc-t">Каталог</div><a href="#">Компрессоры</a><a href="#">Инверторные</a><a href="#">Аспирации</a><a href="#">Ресиверы</a><a href="#">Запчасти</a></div>
       <div class="fcol"><div class="fc-t">Сервис</div><a href="#">Гарантия</a><a href="#">Сервис</a><a href="#">Доставка</a><a href="#">Оплата</a></div>
-      <div class="fcol"><div class="fc-t">Контакты</div><a href="tel:+78005506694">8 800 550 66 94</a><a href="#">sales@hitcom-stanki.ru</a><a href="#">Москва</a><a href="#">Пн–Пт 9:00–18:00</a></div>
+      <div class="fcol"><div class="fc-t">Контакты</div><a href="tel:+78005506694" onclick="metrikaGoal('footer_phone_click')">8 800 550 66 94</a><a href="#">sales@hitcom-stanki.ru</a><a href="#">Москва</a><a href="#">Пн–Пт 9:00–18:00</a></div>
     </div>
     <div class="foot-bot">
       <span>© HITCOM 2026. Все права защищены.</span>
@@ -1802,11 +1815,11 @@
 <!-- ══════════ ПЛАВАЮЩИЙ ВИДЖЕТ ══════════ -->
 <div class="fw">
   <div class="fw-menu" id="fwMenu">
-    <a href="tel:+78005506694" class="fwlnk"><span class="fw-ico"><svg><use href="#i-phone"/></svg></span>8 800 550 66 94</a>
-    <a href="https://max.ru/u/f9LHodD0cOK2_pzywAu6JKtp91ZIhop09aqGhfPTrTokdhy2OUk1_NpSIuc" class="fwlnk"><span class="fw-ico"><svg><use href="#i-chat"/></svg></span>Max</a>
-    <button class="fwlnk" onclick="openPop('call');document.getElementById('fwMenu').classList.remove('open');document.getElementById('fwTog').classList.remove('on')"><span class="fw-ico"><svg><use href="#i-flash"/></svg></span>Перезвоним за 2 мин</button>
+    <a href="tel:+78005506694" class="fwlnk" onclick="metrikaGoal('widget_phone_click')"><span class="fw-ico"><svg><use href="#i-phone"/></svg></span>8 800 550 66 94</a>
+    <a href="https://max.ru/u/f9LHodD0cOK2_pzywAu6JKtp91ZIhop09aqGhfPTrTokdhy2OUk1_NpSIuc" class="fwlnk" onclick="metrikaGoal('widget_max_click')"><span class="fw-ico"><svg><use href="#i-chat"/></svg></span>Max</a>
+    <button class="fwlnk" onclick="metrikaGoal('widget_callback_click');openPop('call');closeWidget()"><span class="fw-ico"><svg><use href="#i-flash"/></svg></span>Перезвоним за 2 мин</button>
   </div>
-  <button class="fwtog" id="fwTog" onclick="this.classList.toggle('on');document.getElementById('fwMenu').classList.toggle('open')">
+  <button class="fwtog" id="fwTog" onclick="toggleWidget()">
     <svg><use href="#i-plus"/></svg>
   </button>
 </div>

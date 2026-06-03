@@ -1,7 +1,18 @@
+const METRIKA_COUNTER_ID = 109608960;
+
+function metrikaGoal(goal, params = {}) {
+  try {
+    if (typeof window.ym === 'function') {
+      window.ym(METRIKA_COUNTER_ID, 'reachGoal', goal, params);
+    }
+  } catch (e) {}
+}
+
 /* ═══ КВИЗ ═══ */
 function selQ(el, step) {
   el.closest('.qopts').querySelectorAll('.qopt').forEach(o => o.classList.remove('sel'));
   el.classList.add('sel');
+  metrikaGoal('quiz_step_answer', { step, answer: el.textContent.trim() });
   setTimeout(() => nextQ(step), 320);
 }
 function nextQ(cur) {
@@ -13,6 +24,7 @@ function nextQ(cur) {
     document.getElementById('qp' + (cur + 1)).classList.add('cur');
   } else {
     document.getElementById('qfinal').classList.add('on');
+    metrikaGoal('quiz_final_reached');
   }
 }
 function prevQ(cur) {
@@ -85,12 +97,14 @@ function catF(btn, cat) {
   document.querySelectorAll('.cf').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   catRender();
+  metrikaGoal('catalog_filter_click', { category: cat });
 }
 
 function catPg(p) {
   if (p === 'next') p = Math.min(curPg + 1, catTotalPages);
   curPg = p;
   catRender();
+  metrikaGoal('catalog_pagination_click', { page: curPg });
 }
 catRender();
 
@@ -145,6 +159,13 @@ const pops = {
 };
 function openPop(type) {
   const d = pops[type]; if (!d) return;
+  const openGoals = {
+    kp: 'form_open_kp',
+    consult: 'form_open_consult',
+    price: 'form_open_price',
+    call: 'form_open_call',
+    mag: 'form_open_material',
+  };
   let h = `<div class="pop-lbl">${d.lbl}</div><div class="pop-ttl">${d.ttl}</div><div class="pop-sub">${d.sub}</div>`;
   h += `<div class="pop-form" id="popForm" data-type="${type}">`;
   d.fields.forEach(([key, placeholder]) => {
@@ -157,6 +178,7 @@ function openPop(type) {
   h += `<p class="pop-note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных</p></div>`;
   document.getElementById('popContent').innerHTML = h;
   document.getElementById('popup').classList.add('open');
+  if (openGoals[type]) metrikaGoal(openGoals[type], { form_type: type });
 }
 function submitPop(btn) {
   const form = document.getElementById('popForm');
@@ -179,6 +201,16 @@ function submitPop(btn) {
     .then(r => r.json())
     .then(res => {
       if (res.ok) {
+        const type = form.dataset.type;
+        const successGoals = {
+          kp: 'lead_popup_kp_success',
+          consult: 'lead_popup_consult_success',
+          price: 'lead_popup_price_success',
+          call: 'lead_popup_call_success',
+          mag: 'lead_popup_material_success',
+        };
+        metrikaGoal('lead_any_success', { form_type: type });
+        if (successGoals[type]) metrikaGoal(successGoals[type], { form_type: type });
         document.getElementById('popContent').innerHTML =
           '<div class="pop-success">' +
           '<svg width="48" height="48"><use href="#i-check"/></svg>' +
@@ -218,6 +250,8 @@ function submitQuiz(btn) {
     .then(r => r.json())
     .then(res => {
       if (res.ok) {
+        metrikaGoal('lead_any_success', { form_type: 'quiz' });
+        metrikaGoal('lead_quiz_success');
         document.getElementById('qfinal').innerHTML =
           '<div style="text-align:center;padding:24px 0">' +
           '<svg width="48" height="48" style="color:var(--coral)"><use href="#i-check"/></svg>' +
@@ -251,6 +285,8 @@ function submitFooter(btn) {
     .then(r => r.json())
     .then(res => {
       if (res.ok) {
+        metrikaGoal('lead_any_success', { form_type: 'footer' });
+        metrikaGoal('lead_footer_success');
         document.querySelector('.final-r').innerHTML =
           '<div style="text-align:center;padding:16px 0;color:#fff">' +
           '<svg width="48" height="48"><use href="#i-check"/></svg>' +
@@ -276,6 +312,41 @@ function closeNav() {
   document.getElementById('main-nav').classList.remove('open');
   document.getElementById('navTog').classList.remove('on');
 }
+
+function toggleWidget() {
+  const tog = document.getElementById('fwTog');
+  const menu = document.getElementById('fwMenu');
+  const willOpen = !menu.classList.contains('open');
+  tog.classList.toggle('on', willOpen);
+  menu.classList.toggle('open', willOpen);
+  if (willOpen) metrikaGoal('widget_open');
+}
+
+function closeWidget() {
+  document.getElementById('fwMenu').classList.remove('open');
+  document.getElementById('fwTog').classList.remove('on');
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('#catGrid .pc-buy, #catGrid .pbb1')) {
+    metrikaGoal('product_card_buy_click');
+  }
+  if (e.target.closest('#catGrid .pbb2')) {
+    metrikaGoal('product_card_consult_click');
+  }
+}, true);
+
+const interactedProductCards = new WeakSet();
+function markProductCardInteraction(card) {
+  if (!card || interactedProductCards.has(card)) return;
+  interactedProductCards.add(card);
+  metrikaGoal('product_card_hover_or_view');
+}
+
+document.querySelectorAll('#catGrid .pcard[data-cat]').forEach(card => {
+  card.addEventListener('mouseenter', () => markProductCardInteraction(card));
+  card.addEventListener('touchstart', () => markProductCardInteraction(card), { passive: true });
+});
 
 /* ═══ HEADER SCROLL ═══ */
 const hdr = document.getElementById('hdr');
