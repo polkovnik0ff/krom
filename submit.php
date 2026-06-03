@@ -1,7 +1,7 @@
 <?php
 define('VK_BOT_URL', 'http://31.184.253.194:3001/notify');
 define('VK_API_KEY', 'hitcom-krom-2026');
-define('EMAIL_TO',   'pa@atwinta.ru');
+define('EMAIL_TO',   'pa@atwinta.ru,sales@hitcom-stanki.ru');
 define('EMAIL_FROM', 'marketing@atwinta.ru');
 define('SMTP_HOST',  'smtp.yandex.ru');
 define('SMTP_PORT',  465);
@@ -97,7 +97,12 @@ if ($city)    $lines[] = "Город: {$city}";
 if ($message) $lines[] = "Сообщение: {$message}";
 $email_body = implode("\n", $lines);
 
-smtp_send(EMAIL_TO, $subject, $email_body);
+foreach (explode(',', EMAIL_TO) as $email_to) {
+    $email_to = trim($email_to);
+    if ($email_to !== '') {
+        smtp_send($email_to, $subject, $email_body);
+    }
+}
 
 $vk_data = ['Тип' => $type_label];
 if ($name)    $vk_data['Имя']       = $name;
